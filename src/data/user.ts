@@ -249,6 +249,62 @@ const INFO = {
       logo: "https://tse4.mm.bing.net/th/id/OIP.vnyuhQ0fki0gSwNv-QaDjgHaGW?rs=1&pid=ImgDetMain&o=7&rm=3",
     },
   ],
+  playstore: [
+    {
+      title: "Acordaí",
+      description:
+        "Despertador inteligente e minimalista projetado especificamente para dispositivos Wear OS, garantindo que você nunca perca seus compromissos diretamente do seu pulso.",
+      logo: "https://play-lh.googleusercontent.com/cK59-DYZTxhJ_cVRgP9mPpgTpDsuNo-5NljvEKYA6dSnPRJkLrnXqWP8Xohoy0XYKE4C=w480-h960-rw", // Placeholder or direct link if I can find it, using a generic app icon style
+      linkText: "Ver na Play Store",
+      link: "https://play.google.com/store/apps/details?id=davi.android.alarmapp",
+      metrics: "Wear OS | +100 Downloads",
+    },
+    {
+      title: "WatchCode Kotlin",
+      description:
+        "Watchface temática de programação desenvolvida em Kotlin para Wear OS. O design perfeito para desenvolvedores que querem exibir sua paixão no pulso.",
+      logo: "https://play-lh.googleusercontent.com/yZ5zOatdIdH7Ts2RAiM-6Vb0_SrSvzcOFruUtvaZIgODJ5APtulch-NxxcuzqjjyGA=w480-h960-rw",
+      linkText: "Ver na Play Store",
+      link: "https://play.google.com/store/apps/details?id=com.davi.dev.watchfacecodekotlin",
+      metrics: "Paid App | Kotlin | Wear OS",
+    },
+    {
+      title: "Blaze Bird",
+      description:
+        "Um jogo arcade desafiador e viciante onde você controla um pássaro em um ambiente dinâmico. Teste seus reflexos!",
+      logo: "https://play-lh.googleusercontent.com/zyyq_X6HmzKUIMbUbNvORjSVVqtzrmpwKmEXufX-kWT3N-OGEYP1ETzyAK9l3DEHBQ=w480-h960-rw",
+      linkText: "Ver na Play Store",
+      link: "https://play.google.com/store/apps/details?id=com.davi.dev.blazebird",
+      metrics: "Arcade Game",
+    },
+    {
+      title: "WatchCode",
+      description:
+        "A versão clássica do WatchCode. Uma watchface elegante com estética de código para amantes de tecnologia.",
+      logo: "https://play-lh.googleusercontent.com/RZw8iIxmBKJzXhdXs5scDKvwz1zI4qhTrNz8bN6tLz69CgzfO8RzNDicQLixQRgk2H8K=w480-h960-rw",
+      linkText: "Ver na Play Store",
+      link: "https://play.google.com/store/apps/details?id=com.davi.dev.watchfacecode",
+      metrics: "Wear OS",
+    },
+    {
+      title: "Face Detector - DF MLKIT",
+      description:
+        "Aplicação demonstrativa do poder do Google ML Kit, detectando faces com precisão e velocidade em tempo real.",
+      logo: "https://play-lh.googleusercontent.com/cTtrgsPzuMm-qRJ-i1QZBtABuYo04uZmTEvs08yM6Y-7TEU1jr6AVHTwJ_xDWV5fRxw=w480-h960-rw",
+      linkText: "Ver na Play Store",
+      link: "https://play.google.com/store/apps/details?id=com.davi.dev.face_detect_scan",
+      metrics: "AI/ML | Google ML Kit",
+    },
+    {
+      title: "Text Detector MLKIT",
+      description:
+        "Extraia texto de imagens em tempo real com facilidade usando esta ferramenta baseada no Google ML Kit.",
+      logo: "https://play-lh.googleusercontent.com/HO6cva4kclaRwz60mhogAtOOGx-ApcJSLuVP0FbKOYyWUyGMvR5JyKBXNxohTrHwoll5=w480-h960-rw",
+      linkText: "Ver na Play Store",
+      link: "https://play.google.com/store/apps/details?id=com.davi.dev.text_detector_google_ml_kit",
+      metrics: "OCR | Google ML Kit",
+    },
+  ],
 };
 
 export default INFO;

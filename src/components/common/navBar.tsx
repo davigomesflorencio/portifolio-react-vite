@@ -49,6 +49,11 @@ const NavBar = (props: NavBarProps) => {
               >
                 <Link to="/projects">Projetos</Link>
               </li>
+              <li
+                className={`font-bold text-[110%] ${active === "playstore" ? "text-accent" : "text-primary dark:text-[#f4f4f5] hover:text-accent transition-colors duration-300"}`}
+              >
+                <Link to="/playstore">Play Store</Link>
+              </li>
 
               <li
                 className={`font-bold text-[110%] ${active === "contact" ? "text-accent" : "text-primary dark:text-[#f4f4f5] hover:text-accent transition-colors duration-300"}`}

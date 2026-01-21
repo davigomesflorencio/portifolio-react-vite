@@ -7,6 +7,7 @@ import About from "./pages/about";
 import Projects from "./pages/projects";
 import Notfound from "./pages/404";
 import Contact from "./pages/contact";
+import PlayStore from "./pages/playstore";
 
 export default function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/playstore" element={<PlayStore />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </div>
