@@ -22,8 +22,10 @@ const INFO = {
   },
 
   about: {
-    title: "Mobile Developer | Java | Kotlin | Typescript | Flutter | Android",
-    description: "",
+    title:
+      "Mobile Developer : Android | IOS | Kotlin | Flutter | Kotlin Multiplatform | Java ",
+    description:
+      "Desenvolvedor Pleno com foco em Android e tecnologias móveis, especializado em Kotlin, Java e Flutter. Tenho experiência sólida no desenvolvimento de aplicações nativas para Android e wearables, utilizando Jetpack Compose, MVVM, Retrofit e Samsung Health SDK, além de implementar práticas de CI/CD, monitoramento e análise de dados para garantir alta qualidade e performance.\n\n Complemento minha atuação no mobile com desenvolvimento Back-End em Spring Boot (Java) e Python (FastAPI/Flask), criando APIs RESTful escaláveis e microsserviços com Docker e Kubernetes. Possuo conhecimentos em análise de dados com Python, processamento de sinais fisiológicos com NeuroKit e aplicação de Teoria dos Grafos em soluções de conectividade e otimização.",
   },
 
   projects: [
