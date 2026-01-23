@@ -13,6 +13,16 @@ const NavBar = (props: NavBarProps) => {
     const theme = localStorage.getItem("theme");
     return theme === "dark";
   });
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024); // lg breakpoint
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -33,7 +43,7 @@ const NavBar = (props: NavBarProps) => {
       <div className="flex justify-center items-center m-0">
         <nav className="flex justify-center items-center fixed top-[3vh] z-[999] max-sm:left-[10%] max-sm:w-[80%] max-sm:text-[80%]">
           <div className="flex items-center bg-white dark:bg-[#27272a] shadow-[0px_2px_10px_rgba(0,0,0,0.1)] rounded-[40px] px-2 transition-colors duration-300">
-            <ul className="flex justify-between items-center list-none ml-[16px] mr-[20px] my-[10px] gap-6">
+            <ul className="flex justify-between items-center list-none ml-[16px] mr-[20px] my-[10px] lg:gap-6 gap-2">
               <li
                 className={`font-bold text-[110%] ${active === "home" ? "text-accent" : "text-primary dark:text-[#f4f4f5] hover:text-accent transition-colors duration-300"}`}
               >
@@ -50,9 +60,11 @@ const NavBar = (props: NavBarProps) => {
                 <Link to="/projects">Projetos</Link>
               </li>
               <li
-                className={`font-bold text-[110%] ${active === "playstore" ? "text-accent" : "text-primary dark:text-[#f4f4f5] hover:text-accent transition-colors duration-300"}`}
+                className={`font-bold text-center text-[110%] ${active === "playstore" ? "text-accent" : "text-primary dark:text-[#f4f4f5] hover:text-accent transition-colors duration-300"}`}
               >
-                <Link to="/playstore">Play Store</Link>
+                <Link to="/playstore">
+                  {isLargeScreen ? "Playstore" : "Apps"}
+                </Link>
               </li>
 
               <li
@@ -62,7 +74,7 @@ const NavBar = (props: NavBarProps) => {
               </li>
             </ul>
             <div
-              className="flex items-center justify-center w-8 h-8 rounded-full bg-[#f4f4f5] dark:bg-[#3f3f46] cursor-pointer hover:bg-quaternary dark:hover:bg-[#52525b] transition-all duration-300 ml-2"
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-[#f4f4f5] dark:bg-[#3f3f46] cursor-pointer hover:bg-quaternary dark:hover:bg-[#52525b] transition-all duration-300 "
               onClick={toggleTheme}
             >
               <FontAwesomeIcon

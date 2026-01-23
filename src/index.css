@@ -96,7 +96,7 @@
 
   .page-footer::before {
     content: "";
-    @apply absolute left-0 right-0 border-t-2;
+    @apply absolute left-0 right-0 border-t-2 border-white dark:border-black;
   }
 
   @media (max-width: 1270px) {
