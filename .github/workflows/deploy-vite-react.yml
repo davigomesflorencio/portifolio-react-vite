@@ -49,16 +49,16 @@ jobs:
       - name: Setup known hosts
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
       - name: Test SSH Connection
         run: |
-          ssh -o BatchMode=yes -o ConnectTimeout=5 ${{ secrets.SSH_USER }}@${{ secrets.VPS_HOST }} "echo '✅ Connection to ${{ secrets.VPS_HOST }} successful!'"
+          ssh -o BatchMode=yes -o ConnectTimeout=5 ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "echo '✅ Connection to ${{ secrets.SSH_HOST }} successful!'"
 
       - name: Deploy to server
         run: |
           # Create deployment directory on server if it doesn't exist
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.VPS_HOST }} "
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
             sudo mkdir -p /var/www/${{ secrets.APP_NAME }}
             sudo chown ${{ secrets.SSH_USER }}:www-data /var/www/${{ secrets.APP_NAME }}
           "
