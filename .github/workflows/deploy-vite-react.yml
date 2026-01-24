@@ -34,12 +34,55 @@ jobs:
           VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
           VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
 
-      - name: Deploy to server
-        uses: appleboy/ssh-action@master
+      # - name: Setup SSH
+      #   run: |
+      #     mkdir -p ~/.ssh
+      #     echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+      #     chmod 600 ~/.ssh/id_ed25519
+      #     ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          port: ${{ secrets.SSH_PORT }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          script: "cd portifolio-vite-react && ./scripts/deploy.sh"
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Setup known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Test SSH Connection
+        run: |
+          ssh -o BatchMode=yes -o ConnectTimeout=5 ${{ secrets.SSH_USER }}@${{ secrets.VPS_HOST }} "echo '✅ Connection to ${{ secrets.VPS_HOST }} successful!'"
+
+      - name: Deploy to server
+        run: |
+          # Create deployment directory on server if it doesn't exist
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.VPS_HOST }} "
+            sudo mkdir -p /var/www/${{ secrets.APP_NAME }}
+            sudo chown ${{ secrets.SSH_USER }}:www-data /var/www/${{ secrets.APP_NAME }}
+          "
+
+          # Deploy built files
+          scp -r ./dist/. ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/${{ secrets.APP_NAME }}/
+
+          # Set proper permissions
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
+            sudo chown -R www-data:www-data /var/www/${{ secrets.APP_NAME }}
+            sudo chmod -R 755 /var/www/${{ secrets.APP_NAME }}
+          "
+
+      - name: Reload Nginx
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "sudo systemctl reload nginx"
+
+      - name: Verify deployment
+        run: |
+          sleep 10
+          HTTP_CODE=$(curl -o /dev/null -s -w "%{http_code}" ${{ secrets.APP_URL }})
+          if [ $HTTP_CODE -eq 200 ]; then
+            echo "✅ Deployment successful - HTTP $HTTP_CODE"
+          else
+            echo "❌ Deployment verification failed - HTTP $HTTP_CODE"
+            exit 1
+          fi
