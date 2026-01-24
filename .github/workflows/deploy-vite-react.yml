@@ -42,4 +42,4 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          script: "cd projects/portifolio-vite-react && ./scripts/deploy.sh"
+          script: "cd portifolio-vite-react && ./scripts/deploy.sh"
