@@ -73,7 +73,7 @@ const Homepage = () => {
                     href={INFO.main.cv}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center text-[20px] px-6 py-3 mt-8 text-sm font-medium text-white bg-primary rounded-lg hover:bg-secondary transition-all duration-300 shadow-lg"
+                    className="inline-flex items-center text-[20px] px-6 py-3 mt-8 text-sm font-medium text-white dark:text-black bg-primary rounded-lg hover:bg-secondary transition-all duration-300 shadow-lg"
                   >
                     <FontAwesomeIcon icon={faDownload} className="mr-2" />
                     Download CV

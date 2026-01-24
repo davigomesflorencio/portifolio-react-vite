@@ -90,7 +90,7 @@ const ContactForm = () => {
         <button
           type="submit"
           disabled={status === "loading"}
-          className={`px-6 py-3 text-white border-none rounded-lg font-semibold cursor-pointer self-start transition-all hover:bg-secondary hover:-translate-y-0.5 active:translate-y-0 max-sm:w-full ${
+          className={`px-6 py-3 text-white dark:text-black border-none rounded-lg font-semibold cursor-pointer self-start transition-all hover:bg-secondary hover:-translate-y-0.5 active:translate-y-0 max-sm:w-full ${
             status === "loading" ? "bg-secondary opacity-70" : "bg-primary"
           }`}
         >
