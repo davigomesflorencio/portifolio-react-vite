@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Cal Sans";
+  src: url("/fonts/calsans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --color-primary: #27272a;
   --color-secondary: #65656d;
