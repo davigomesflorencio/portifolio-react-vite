@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import NavBar from "../components/common/navBar";
 import AllProjects from "../components/projects/allProjects";
 import Footer from "../components/common/fotter";
 
 const Projects = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -15,7 +17,7 @@ const Projects = () => {
         <div className="content-wrapper">
           <div className="flex flex-col h-full m-0 pt-[120px]">
             <div className="title !w-full text-center">
-              Principais projetos do meu GitHub:
+              {t("projects.title")}
             </div>
 
             <div className="pt-10">

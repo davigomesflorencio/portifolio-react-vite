@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import NavBar from "../components/common/navBar";
 import AllApps from "../components/playstore/allApps";
 import Footer from "../components/common/fotter";
@@ -6,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGooglePlay } from "@fortawesome/free-brands-svg-icons";
 
 const PlayStore = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -23,11 +25,9 @@ const PlayStore = () => {
                   className="text-accent text-3xl"
                 />
               </div>
-              <div className="title w-full!">Meus Apps na Google Play</div>
+              <div className="title w-full!">{t("playstore.title")}</div>
               <div className="subtitle w-full!">
-                Sempre buscando inovar no desenvolvimento mobile, aqui estão
-                meus aplicativos publicados na Google Play Store, com foco
-                especial em Wear OS e ferramentas de IA.
+                {t("playstore.description")}
               </div>
             </div>
 

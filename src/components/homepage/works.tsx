@@ -2,13 +2,15 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 import INFO from "../../data/user";
 import Card from "../common/card";
+import { useTranslation } from "react-i18next";
 
 const Works = () => {
+  const { t } = useTranslation();
   return (
     <div className="works">
       <Card
         icon={faBriefcase}
-        title="Experiência Profissional"
+        title={t("homepage.experiences")}
         body={
           <div className="flex flex-col gap-6 mb-8 ">
             {INFO.works.map((work, index) => (

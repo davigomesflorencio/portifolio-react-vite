@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 import NavBar from "../components/common/navBar";
 import Socials from "../components/about/socials";
 
-import INFO from "../data/user";
 import Footer from "../components/common/fotter";
 import Stack from "../components/about/stack";
 import WearableStack from "../components/about/wearable_stack";
@@ -15,6 +15,7 @@ import "leaflet/dist/leaflet.css";
 const position: [number, number] = [-4.979116, -39.056291];
 
 const About = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -28,13 +29,11 @@ const About = () => {
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-full">
                 <div className="title !w-full text-center">
-                  {INFO.about.title}
+                  {t("about.title")}
                 </div>
 
                 <div className="subtitle !w-full max-lg:pt-5 dark:text-[#f4f4f5]">
-                  Meu nome é Davi Gomes Florencio e sou Técnico em informática
-                  na EEEP Capelão Frei Orlando e Graduado em Ciência da
-                  Computação na Universidade Federal do Ceará Campus Quixadá,
+                  {t("about.greeting")}
                   <div className="w-full h-[440px] mt-10">
                     <MapContainer
                       center={position}
@@ -47,39 +46,25 @@ const About = () => {
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                       />
                       <Marker position={position}>
-                        <Popup>
-                          UFC Campus Quixadá <br /> Onde minha jornada acadêmica
-                          se consolidou.
-                        </Popup>
+                        <Popup>{t("about.map_popup")}</Popup>
                       </Marker>
                     </MapContainer>
                   </div>
                   <br />
                   <br />
-                  Sou Desenvolvedor Pleno com foco em Android, IOS e tecnologias
-                  móveis, especializado em Kotlin, Java e Flutter.
+                  {t("about.intro_mobile")}
                   <Stack />
                   <br />
                   <br />
-                  Tenho experiência sólida no desenvolvimento de aplicações
-                  nativas para Android e wearables, utilizando Jetpack Compose,
-                  MVVM, Retrofit e Samsung Health SDK, além de implementar
-                  práticas de CI/CD, monitoramento e análise de dados para
-                  garantir alta qualidade e performance.
+                  {t("about.experience_android")}
                   <WearableStack />
                   <br />
                   <br />
-                  Complemento minha atuação no mobile com desenvolvimento
-                  Back-End em Spring Boot (Java) e Python (FastAPI/Flask),
-                  criando APIs RESTful escaláveis e microsserviços com Docker e
-                  Kubernetes.
+                  {t("about.experience_backend")}
                   <ComplementStack />
                   <br />
                   <br />
-                  Possuo conhecimentos em análise de dados com Python,
-                  processamento de sinais fisiológicos com NeuroKit e aplicação
-                  de Teoria dos Grafos em soluções de conectividade e
-                  otimização.
+                  {t("about.experience_data")}
                   <AnalistStack />
                 </div>
               </div>

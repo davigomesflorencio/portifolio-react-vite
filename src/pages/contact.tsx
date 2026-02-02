@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import NavBar from "../components/common/navBar";
 
 import ContactForm from "../components/contact/contactForm";
@@ -6,6 +7,7 @@ import INFO from "../data/user";
 import Footer from "../components/common/fotter";
 
 const Contact = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -17,13 +19,11 @@ const Contact = () => {
         <div className="content-wrapper">
           <div className="flex flex-col justify-around mt-[120px] mb-9 dark:text-[#f4f4f5]">
             <div className="title !w-full text-center">
-              Formas de entrar em contato comigo
+              {t("contact.title")}
             </div>
 
             <div className="subtitle !w-full">
-              Agradeço seus comentários, perguntas e sugestões. Se você tiver
-              alguma pergunta ou comentário específico, sinta-se à vontade para
-              me enviar um e-mail diretamente para{" "}
+              {t("contact.description")}
               <a
                 href={`mailto:${INFO.main.email}`}
                 className="text-secondary hover:text-primary transition-colors duration-200"
@@ -33,9 +33,7 @@ const Contact = () => {
               .
               <br />
               <br />
-              Como alternativa, você pode usar o formulário de contato em meu
-              site para entrar em contato. Basta preencher os campos
-              obrigatórios e entrarei em contato o mais breve possível.
+              {t("contact.alternative")}
               <ContactForm />
             </div>
           </div>

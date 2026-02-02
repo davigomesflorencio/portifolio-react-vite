@@ -1,0 +1,39 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "Sobre",
+        "projects": "Projetos",
+        "playstore": "Play Store",
+        "contact": "Contato"
+    },
+    "homepage": {
+        "title": "Mobile Developer : Android | IOS | Kotlin | Flutter | Kotlin Multiplatform | Java ",
+        "description": "Desenvolvedor Pleno com foco em Android e tecnologias móveis, especializado em Kotlin, Java e Flutter. Tenho experiência sólida no desenvolvimento de aplicações nativas para Android e wearables, utilizando Jetpack Compose, MVVM, Retrofit e Samsung Health SDK, além de implementar práticas de CI/CD, monitoramento e análise de dados para garantir alta qualidade e performance.\n\n Complemento minha atuação no mobile com desenvolvimento Back-End em Spring Boot (Java) e Python (FastAPI/Flask), criando APIs RESTful escaláveis e microsserviços com Docker e Kubernetes. Possuo conhecimentos em análise de dados com Python, processamento de sinais fisiológicos com NeuroKit e aplicação de Teoria dos Grafos em soluções de conectividade e otimização.",
+        "experiences": "Experiências profissionais",
+        "academic": "Formação acadêmica"
+    },
+    "about": {
+        "title": "Sou Davi Gomes Florencio. Moro no Brasil, onde projeto o futuro.",
+        "greeting": "Meu nome é Davi Gomes Florencio e sou Técnico em informática na EEEP Capelão Frei Orlando e Graduado em Ciência da Computação na Universidade Federal do Ceará Campus Quixadá,",
+        "map_popup": "UFC Campus Quixadá \n Onde minha jornada acadêmica se consolidou.",
+        "intro_mobile": "Sou Desenvolvedor Pleno com foco em Android, IOS e tecnologias móveis, especializado em Kotlin, Java e Flutter.",
+        "experience_android": "Tenho experiência sólida no desenvolvimento de aplicações nativas para Android e wearables, utilizando Jetpack Compose, MVVM, Retrofit e Samsung Health SDK, além de implementar práticas de CI/CD, monitoramento e análise de dados para garantir alta qualidade e performance.",
+        "experience_backend": "Complemento minha atuação no mobile com desenvolvimento Back-End em Spring Boot (Java) e Python (FastAPI/Flask), criando APIs RESTful escaláveis e microsserviços com Docker e Kubernetes.",
+        "experience_data": "Possuo conhecimentos em análise de dados com Python, processamento de sinais fisiológicos com NeuroKit e aplicação de Teoria dos Grafos em soluções de conectividade e otimização."
+    },
+    "projects": {
+        "title": "Principais projetos do meu GitHub:"
+    },
+    "contact": {
+        "title": "Formas de entrar em contato comigo",
+        "description": "Agradeço seus comentários, perguntas e sugestões. Se você tiver alguma pergunta ou comentário específico, sinta-se à vontade para me enviar um e-mail diretamente para ",
+        "alternative": "Como alternativa, você pode usar o formulário de contato em meu site para entrar em contato. Basta preencher os campos obrigatórios e entrarei em contato o mais breve possível."
+    },
+    "playstore": {
+        "title": "Meus Apps na Google Play",
+        "description": "Sempre buscando inovar no desenvolvimento mobile, aqui estão meus aplicativos publicados na Google Play Store, com foco especial em Wear OS e ferramentas de IA."
+    },
+    "footer": {
+        "rights": "Todos os direitos reservados."
+    }
+}

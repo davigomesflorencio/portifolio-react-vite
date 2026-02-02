@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faDownload, faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslation } from "react-i18next";
 
 import NavBar from "../components/common/navBar";
 import Works from "../components/homepage/works";
@@ -17,6 +18,7 @@ import INFO from "../data/user";
 import Footer from "../components/common/fotter";
 
 const Homepage = () => {
+  const { t } = useTranslation();
   const [logoSize, setLogoSize] = useState(80);
   const [oldLogoSize, setOldLogoSize] = useState(80);
 
@@ -61,11 +63,11 @@ const Homepage = () => {
             <div className="flex flex-col lg:flex-row justify-between items-center">
               <div className="flex flex-col items-start lg:order-2">
                 <div className="title !w-[100%] lg:!w-[100%] mt-5 lg:mt-0 text-center">
-                  {INFO.homepage.title}
+                  {t("homepage.title")}
                 </div>
 
                 <div className="subtitle !w-[100%] lg:!w-[100%] mt-[10px] lg:mt-[25px]">
-                  {INFO.homepage.description}
+                  {t("homepage.description")}
                 </div>
 
                 <div className="title !w-[100%] lg:!w-[100%] mt-5 lg:mt-0 text-center">
@@ -124,7 +126,7 @@ const Homepage = () => {
             </div>
 
             <div className="w-full mt-10 title text-center">
-              <h2>Experiências profissionais</h2>
+              <h2>{t("homepage.experiences")}</h2>
             </div>
 
             <div className="flex flex-col lg:flex-row mt-10">
@@ -138,7 +140,7 @@ const Homepage = () => {
             </div>
 
             <div className="w-full mt-10 mb-10 title text-center">
-              <h2>Formação acadêmica</h2>
+              <h2>{t("homepage.academic")}</h2>
             </div>
 
             <div className="flex flex-col lg:flex-row">
