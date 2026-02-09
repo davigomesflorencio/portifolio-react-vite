@@ -5,6 +5,7 @@ import NavBar from "../components/common/navBar";
 import ContactForm from "../components/contact/contactForm";
 import INFO from "../data/user";
 import Footer from "../components/common/fotter";
+import Particles from "../components/common/particles";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -15,6 +16,26 @@ const Contact = () => {
   return (
     <React.Fragment>
       <div className="page-content">
+        <div
+          style={{
+            width: "100%",
+            height: "20%",
+            position: "absolute",
+            marginInline: "auto",
+          }}
+        >
+          <Particles
+            particleColors={["#00d3f2"]}
+            particleCount={200}
+            particleSpread={5}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover
+            alphaParticles={false}
+            disableRotation={false}
+            pixelRatio={2}
+          />
+        </div>
         <NavBar active="contact" />
         <div className="content-wrapper">
           <div className="flex flex-col justify-around mt-[120px] mb-9 dark:text-[#f4f4f5]">

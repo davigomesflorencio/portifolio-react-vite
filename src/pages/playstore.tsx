@@ -5,6 +5,7 @@ import AllApps from "../components/playstore/allApps";
 import Footer from "../components/common/fotter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGooglePlay } from "@fortawesome/free-brands-svg-icons";
+import Particles from "../components/common/particles";
 
 const PlayStore = () => {
   const { t } = useTranslation();
@@ -15,6 +16,26 @@ const PlayStore = () => {
   return (
     <React.Fragment>
       <div className="page-content">
+        <div
+          style={{
+            width: "100%",
+            height: "500px",
+            position: "absolute",
+            marginInline: "auto",
+          }}
+        >
+          <Particles
+            particleColors={["#00d3f2"]}
+            particleCount={200}
+            particleSpread={5}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover
+            alphaParticles={false}
+            disableRotation={false}
+            pixelRatio={2}
+          />
+        </div>
         <NavBar active="playstore" />
         <div className="content-wrapper">
           <div className="flex flex-col h-full m-0 pt-[120px]">

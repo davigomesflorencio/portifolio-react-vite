@@ -11,6 +11,7 @@ import ComplementStack from "../components/about/complement_stack";
 import AnalistStack from "../components/about/analist_stack";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import Particles from "../components/common/particles";
 
 const position: [number, number] = [-4.979116, -39.056291];
 
@@ -23,6 +24,26 @@ const About = () => {
   return (
     <React.Fragment>
       <div className="page-content">
+        <div
+          style={{
+            width: "100%",
+            height: "50vh",
+            position: "absolute",
+            marginInline: "auto",
+          }}
+        >
+          <Particles
+            particleColors={["#00d3f2"]}
+            particleCount={200}
+            particleSpread={5}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover
+            alphaParticles={false}
+            disableRotation={false}
+            pixelRatio={2}
+          />
+        </div>
         <NavBar active="about" />
         <div className="content-wrapper">
           <div className="flex flex-col h-full m-0 pt-[120px] max-sm:pt-[60px] ">

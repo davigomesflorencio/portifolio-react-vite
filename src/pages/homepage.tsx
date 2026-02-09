@@ -18,6 +18,7 @@ import INFO from "../data/user";
 import Footer from "../components/common/fotter";
 import FadeContent from "../components/common/fadeContent";
 import GradientText from "../components/common/gradientText";
+import Particles from "../components/common/particles";
 
 const Homepage = () => {
   const { t } = useTranslation();
@@ -51,6 +52,26 @@ const Homepage = () => {
   return (
     <React.Fragment>
       <div className="page-content">
+        <div
+          style={{
+            width: "100%",
+            height: "800px",
+            position: "absolute",
+            marginInline: "auto",
+          }}
+        >
+          <Particles
+            particleColors={["#00d3f2"]}
+            particleCount={200}
+            particleSpread={5}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover
+            alphaParticles={false}
+            disableRotation={false}
+            pixelRatio={2}
+          />
+        </div>
         <NavBar active="home" />
         <div className="content-wrapper">
           <div className="flex flex-col items-center w-auto lg:w-auto mt-[150px]">
