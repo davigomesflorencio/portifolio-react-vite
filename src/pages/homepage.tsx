@@ -13,17 +13,161 @@ import NavBar from "../components/common/navBar";
 import Works from "../components/homepage/works";
 
 import Academic from "../components/homepage/academic";
-import Tecnology from "../components/homepage/tecnnology";
 import INFO from "../data/user";
 import Footer from "../components/common/fotter";
 import FadeContent from "../components/common/fadeContent";
 import GradientText from "../components/common/gradientText";
 import Particles from "../components/common/particles";
+import LogoLoop, { type LogoItem } from "../components/common/logoLoop";
 
 const Homepage = () => {
   const { t } = useTranslation();
   const [logoSize, setLogoSize] = useState(80);
   const [oldLogoSize, setOldLogoSize] = useState(80);
+
+  const imageLogosMobile = [
+    {
+      src: "../../assets/mobile/android.png",
+      alt: "Android",
+      href: "https://android.com",
+    },
+    {
+      src: "../../assets/mobile/apple.png",
+      alt: "Apple",
+      href: "https://www.apple.com/",
+    },
+    {
+      src: "../../assets/mobile/Dart-Dark 1.png",
+      alt: "Dart",
+      href: "https://dart.dev",
+    },
+    {
+      src: "../../assets/mobile/Firebase-Dark 1.png",
+      alt: "Firebase",
+      href: "https://firebase.google.com/",
+    },
+    {
+      src: "../../assets/mobile/Flutter-Dark 1.png",
+      alt: "Flutter",
+      href: "https://flutter.dev/",
+    },
+    {
+      src: "../../assets/mobile/Idea-Dark 1.png",
+      alt: "Idea",
+      href: "https://www.jetbrains.com/idea/",
+    },
+    {
+      src: "../../assets/mobile/Java-Dark 1.png",
+      alt: "Java",
+      href: "https://www.java.com/",
+    },
+    {
+      src: "../../assets/mobile/Kotlin-Dark 1.png",
+      alt: "Kotlin",
+      href: "https://kotlinlang.org/",
+    },
+    {
+      src: "../../assets/mobile/Ktor-Dark 1.png",
+      alt: "Ktor",
+      href: "https://ktor.io/",
+    },
+    {
+      src: "../../assets/mobile/Swift 1.png",
+      alt: "Swift",
+      href: "https://developer.apple.com/swift/",
+    },
+  ] as LogoItem[];
+
+  const imageLogosFront = [
+    {
+      src: "../../assets/front/angular.png",
+      alt: "Angular",
+      href: "https://angular.io/",
+    },
+    {
+      src: "../../assets/front/CSS 1.png",
+      alt: "CSS",
+      href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    },
+    {
+      src: "../../assets/front/HTML 1.png",
+      alt: "HTML",
+      href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    },
+    {
+      src: "../../assets/front/JavaScript 1.png",
+      alt: "JavaScript",
+      href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    },
+    {
+      src: "../../assets/front/React-Dark 1.png",
+      alt: "React",
+      href: "https://reactjs.org/",
+    },
+    {
+      src: "../../assets/front/TypeScript 1.png",
+      alt: "TypeScript",
+      href: "https://www.typescriptlang.org/",
+    },
+    {
+      src: "../../assets/front/TailwindCSS-Dark 1.png",
+      alt: "TailwindCSS",
+      href: "https://tailwindcss.com/",
+    },
+    {
+      src: "../../assets/front/Vite-Dark 1.png",
+      alt: "Vite",
+      href: "https://vitejs.dev/",
+    },
+  ] as LogoItem[];
+
+  const stackBackEnd = [
+    {
+      src: "../../assets/back/docker.png",
+      alt: "Docker",
+      href: "https://www.docker.com/",
+    },
+    {
+      src: "../../assets/back/FastAPI 1.png",
+      alt: "FastAPI",
+      href: "https://fastapi.tiangolo.com/",
+    },
+    {
+      src: "../../assets/back/Jenkins-Dark 1.png",
+      alt: "Jenkins",
+      href: "https://jenkins.io/",
+    },
+    {
+      src: "../../assets/back/NodeJS-Dark 1.png",
+      alt: "NodeJS",
+      href: "https://nodejs.org/",
+    },
+    {
+      src: "../../assets/back/Postman 1.png",
+      alt: "Postman",
+      href: "https://www.postman.com/",
+    },
+    {
+      src: "../../assets/back/Python-Dark 1.png",
+      alt: "Python",
+      href: "https://www.python.org/",
+    },
+    {
+      src: "../../assets/back/RabbitMQ-Dark 1.png",
+      alt: "RabbitMQ",
+      href: "https://www.rabbitmq.com/",
+    },
+    {
+      src: "../../assets/back/Sentry 1.png",
+      alt: "Sentry",
+      href: "https://sentry.io/",
+    },
+    {
+      src: "../../assets/back/Spring-Dark 1.png",
+      alt: "Spring",
+      href: "https://spring.io/",
+    },
+  ] as LogoItem[];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -168,6 +312,88 @@ const Homepage = () => {
             </div>
 
             <div className="w-full mt-10 title text-center">
+              <h2>Tecnologias</h2>
+            </div>
+
+            <div className="w-full mt-5 subtitle text-center">
+              <h3>Stack Mobile</h3>
+            </div>
+
+            <div
+              style={{
+                height: "200px",
+                position: "relative",
+                overflow: "hidden",
+              }}
+              className="top-20"
+            >
+              <LogoLoop
+                logos={imageLogosMobile}
+                speed={100}
+                direction="left"
+                logoHeight={80}
+                gap={60}
+                hoverSpeed={0}
+                scaleOnHover
+                fadeOut
+                fadeOutColor="#ffffff"
+                ariaLabel="Technology partners"
+              />
+            </div>
+
+            <div className="w-full mt-5 subtitle text-center">
+              <h3>Stack Front</h3>
+            </div>
+
+            <div
+              style={{
+                height: "200px",
+                position: "relative",
+                overflow: "hidden",
+              }}
+              className="top-20"
+            >
+              <LogoLoop
+                logos={imageLogosFront}
+                speed={100}
+                direction="right"
+                logoHeight={80}
+                gap={60}
+                hoverSpeed={0}
+                scaleOnHover
+                fadeOut
+                fadeOutColor="#ffffff"
+                ariaLabel="Technology partners"
+              />
+            </div>
+
+            <div className="w-full mt-5 subtitle text-center">
+              <h3>Stack Backend</h3>
+            </div>
+
+            <div
+              style={{
+                height: "200px",
+                position: "relative",
+                overflow: "hidden",
+              }}
+              className="top-20"
+            >
+              <LogoLoop
+                logos={stackBackEnd}
+                speed={120}
+                direction="left"
+                logoHeight={80}
+                gap={60}
+                hoverSpeed={0}
+                scaleOnHover
+                fadeOut
+                fadeOutColor="#ffffff"
+                ariaLabel="Technology partners"
+              />
+            </div>
+
+            <div className="w-full mt-10 title text-center">
               <h2>{t("homepage.experiences")}</h2>
             </div>
 
@@ -176,9 +402,9 @@ const Homepage = () => {
                 <Works />
               </div>
 
-              <div className="flex-1 ml-[30px]">
+              {/* <div className="flex-1 ml-[30px]">
                 <Tecnology />
-              </div>
+              </div> */}
             </div>
 
             <div className="w-full mt-10 mb-10 title text-center">

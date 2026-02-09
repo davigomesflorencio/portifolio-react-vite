@@ -94,7 +94,7 @@
   }
 
   .subtitle {
-    @apply pt-[10px] dark:text-[#f4f4f5] text-[16px] leading-[28px] w-[70%] mt-[25px];
+    @apply pt-[10px] dark:text-[#f4f4f5] text-[20px] leading-[28px] w-[70%] mt-[25px];
   }
 
   .page-footer {
