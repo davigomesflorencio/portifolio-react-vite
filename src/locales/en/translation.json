@@ -10,7 +10,8 @@
         "title": "Mobile Developer : Android | IOS | Kotlin | Flutter | Kotlin Multiplatform | Java ",
         "description": "Mid-level Developer focused on Android and mobile technologies, specialized in Kotlin, Java, and Flutter. I have solid experience in developing native applications for Android and wearables, using Jetpack Compose, MVVM, Retrofit, and Samsung Health SDK, in addition to implementing CI/CD practices, monitoring, and data analysis to ensure high quality and performance.\n\n I complement my mobile performance with Back-End development in Spring Boot (Java) and Python (FastAPI/Flask), creating scalable RESTful APIs and microservices with Docker and Kubernetes. I have knowledge in data analysis with Python, physiological signal processing with NeuroKit, and application of Graph Theory in connectivity and optimization solutions.",
         "experiences": "Professional Experiences",
-        "academic": "Academic Background"
+        "academic": "Academic Background",
+        "technologies": "Tecnologies"
     },
     "about": {
         "title": "I'm Davi Gomes Florencio. I live in Brazil, where I design the future.",

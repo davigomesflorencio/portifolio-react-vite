@@ -304,6 +304,15 @@ const INFO = {
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.text_detector_google_ml_kit",
       metrics: "OCR | Google ML Kit",
     },
+    {
+      title: "Scanner MLKIT",
+      description:
+        "Crie PDFS a partir de imagens em tempo real com facilidade usando esta ferramenta baseada no Google ML Kit.",
+      logo: "https://play-lh.googleusercontent.com/4ORy_kUdWucFUUdI70qQufsy3wuH81Olfmx04PRYQY6xPx2kjiZ8jkKk9qnuer-lNw5VdehAK8-P9eQdSRIUyA=w240-h480-rw",
+      linkText: "Ver na Play Store",
+      link: "https://play.google.com/store/apps/details?id=com.davi.dev.scannermlkit",
+      metrics: "OCR | Google ML Kit",
+    },
   ],
 };
 
