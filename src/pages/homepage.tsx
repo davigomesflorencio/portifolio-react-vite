@@ -27,52 +27,52 @@ const Homepage = () => {
 
   const imageLogosMobile = [
     {
-      src: "../../public/mobile/android.png",
+      src: "./assets/mobile/android.png",
       alt: "Android",
       href: "https://android.com",
     },
     {
-      src: "../../public/mobile/apple.png",
+      src: "./assets/mobile/apple.png",
       alt: "Apple",
       href: "https://www.apple.com/",
     },
     {
-      src: "../../public/mobile/Dart-Dark 1.png",
+      src: "./assets/mobile/Dart-Dark 1.png",
       alt: "Dart",
       href: "https://dart.dev",
     },
     {
-      src: "../../public/mobile/Firebase-Dark 1.png",
+      src: "./assets/mobile/Firebase-Dark 1.png",
       alt: "Firebase",
       href: "https://firebase.google.com/",
     },
     {
-      src: "../../public/mobile/Flutter-Dark 1.png",
+      src: "./assets/mobile/Flutter-Dark 1.png",
       alt: "Flutter",
       href: "https://flutter.dev/",
     },
     {
-      src: "../../public/mobile/Idea-Dark 1.png",
+      src: "./assets/mobile/Idea-Dark 1.png",
       alt: "Idea",
       href: "https://www.jetbrains.com/idea/",
     },
     {
-      src: "../../public/mobile/Java-Dark 1.png",
+      src: "./assets/mobile/Java-Dark 1.png",
       alt: "Java",
       href: "https://www.java.com/",
     },
     {
-      src: "../../public/mobile/Kotlin-Dark 1.png",
+      src: "./assets/mobile/Kotlin-Dark 1.png",
       alt: "Kotlin",
       href: "https://kotlinlang.org/",
     },
     {
-      src: "../../public/mobile/Ktor-Dark 1.png",
+      src: "./assets/mobile/Ktor-Dark 1.png",
       alt: "Ktor",
       href: "https://ktor.io/",
     },
     {
-      src: "../../public/mobile/Swift 1.png",
+      src: "./assets/mobile/Swift 1.png",
       alt: "Swift",
       href: "https://developer.apple.com/swift/",
     },
@@ -80,42 +80,42 @@ const Homepage = () => {
 
   const imageLogosFront = [
     {
-      src: "../../public/front/angular.png",
+      src: "./assets/front/angular.png",
       alt: "Angular",
       href: "https://angular.io/",
     },
     {
-      src: "../../public/front/CSS 1.png",
+      src: "./assets/front/CSS 1.png",
       alt: "CSS",
       href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
     {
-      src: "../../public/front/HTML 1.png",
+      src: "./assets/front/HTML 1.png",
       alt: "HTML",
       href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
     },
     {
-      src: "../../public/front/JavaScript 1.png",
+      src: "./assets/front/JavaScript 1.png",
       alt: "JavaScript",
       href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
     {
-      src: "../../public/front/React-Dark 1.png",
+      src: "./assets/front/React-Dark 1.png",
       alt: "React",
       href: "https://reactjs.org/",
     },
     {
-      src: "../../public/front/TypeScript 1.png",
+      src: "./assets/front/TypeScript 1.png",
       alt: "TypeScript",
       href: "https://www.typescriptlang.org/",
     },
     {
-      src: "../../public/front/TailwindCSS-Dark 1.png",
+      src: "./assets/front/TailwindCSS-Dark 1.png",
       alt: "TailwindCSS",
       href: "https://tailwindcss.com/",
     },
     {
-      src: "../../public/front/Vite-Dark 1.png",
+      src: "./assets/front/Vite-Dark 1.png",
       alt: "Vite",
       href: "https://vitejs.dev/",
     },
@@ -123,47 +123,47 @@ const Homepage = () => {
 
   const stackBackEnd = [
     {
-      src: "../../public/back/docker.png",
+      src: "./assets/back/docker.png",
       alt: "Docker",
       href: "https://www.docker.com/",
     },
     {
-      src: "../../public/back/FastAPI 1.png",
+      src: "./assets/back/FastAPI 1.png",
       alt: "FastAPI",
       href: "https://fastapi.tiangolo.com/",
     },
     {
-      src: "../../public/back/Jenkins-Dark 1.png",
+      src: "./assets/back/Jenkins-Dark 1.png",
       alt: "Jenkins",
       href: "https://jenkins.io/",
     },
     {
-      src: "../../public/back/NodeJS-Dark 1.png",
+      src: "./assets/back/NodeJS-Dark 1.png",
       alt: "NodeJS",
       href: "https://nodejs.org/",
     },
     {
-      src: "../../public/back/Postman 1.png",
+      src: "./assets/back/Postman 1.png",
       alt: "Postman",
       href: "https://www.postman.com/",
     },
     {
-      src: "../../public/back/Python-Dark 1.png",
+      src: "./assets/back/Python-Dark 1.png",
       alt: "Python",
       href: "https://www.python.org/",
     },
     {
-      src: "../../public/back/RabbitMQ-Dark 1.png",
+      src: "./assets/back/RabbitMQ-Dark 1.png",
       alt: "RabbitMQ",
       href: "https://www.rabbitmq.com/",
     },
     {
-      src: "../../public/back/Sentry 1.png",
+      src: "./assets/back/Sentry 1.png",
       alt: "Sentry",
       href: "https://sentry.io/",
     },
     {
-      src: "../../public/back/Spring-Dark 1.png",
+      src: "./assets/back/Spring-Dark 1.png",
       alt: "Spring",
       href: "https://spring.io/",
     },
