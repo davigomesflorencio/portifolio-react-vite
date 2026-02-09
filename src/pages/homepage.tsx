@@ -17,6 +17,7 @@ import Tecnology from "../components/homepage/tecnnology";
 import INFO from "../data/user";
 import Footer from "../components/common/fotter";
 import FadeContent from "../components/common/fadeContent";
+import GradientText from "../components/common/gradientText";
 
 const Homepage = () => {
   const { t } = useTranslation();
@@ -76,7 +77,14 @@ const Homepage = () => {
             <div className="flex flex-col lg:flex-row justify-between items-center">
               <div className="flex flex-col items-start lg:order-2">
                 <div className="title !w-[100%] lg:!w-[100%] mt-5 lg:mt-0 text-center">
-                  {t("homepage.title")}
+                  <GradientText
+                    colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
+                    animationSpeed={8}
+                    showBorder={false}
+                    className="custom-class"
+                  >
+                    {t("homepage.title")}
+                  </GradientText>
                 </div>
 
                 <div className="subtitle !w-[100%] lg:!w-[100%] mt-[10px] lg:mt-[25px]">
