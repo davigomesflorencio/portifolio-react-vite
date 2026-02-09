@@ -78,7 +78,7 @@ const Homepage = () => {
               <div className="flex flex-col items-start lg:order-2">
                 <div className="title !w-[100%] lg:!w-[100%] mt-5 lg:mt-0 text-center">
                   <GradientText
-                    colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
+                    colors={["#258176", "#CF85CD", "#00d3f2"]}
                     animationSpeed={8}
                     showBorder={false}
                     className="custom-class"
@@ -96,7 +96,7 @@ const Homepage = () => {
                     href={INFO.main.cv}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center text-[20px] px-6 py-3 mt-8 text-sm font-medium text-white dark:text-black bg-primary rounded-lg hover:bg-secondary transition-all duration-300 shadow-lg"
+                    className="inline-flex items-center text-[20px] px-6 py-3 mt-8 text-sm font-medium text-black dark:text-white bg-cyan-400 rounded-lg hover:bg-secondary transition-all duration-300 shadow-lg"
                   >
                     <FontAwesomeIcon icon={faDownload} className="mr-2" />
                     Download CV
