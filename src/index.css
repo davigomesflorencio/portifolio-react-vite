@@ -74,7 +74,7 @@
     content: "";
     @apply absolute top-0 bottom-0 bg-[#fafafa] dark:bg-[#1a1a1a] border border-[#f4f4f5] dark:border-[#27272a] z-[1] transition-colors duration-300;
 
-    width: calc((100% - 1200px) / 2);
+    /* width: calc((100% - 1200px) / 2); */
   }
 
   .page-content::before {
