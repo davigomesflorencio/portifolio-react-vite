@@ -86,7 +86,7 @@
   }
 
   .content-wrapper {
-    @apply max-w-[1000px] mx-auto;
+    @apply max-w-[1200px] mx-auto;
   }
 
   .title {
@@ -109,11 +109,11 @@
   @media (max-width: 1270px) {
     .page-content::before,
     .page-content::after {
-      width: calc((100% - 90%) / 2);
+      width: 100;
     }
 
     .content-wrapper {
-      @apply max-w-[90%] pl-[10%] pr-[10%];
+      @apply max-w-[95%] pl-[10%] pr-[10%];
     }
   }
 

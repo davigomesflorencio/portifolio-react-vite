@@ -30,21 +30,34 @@ const INFO = {
 
   projects: [
     {
+      title: "acorda_ai",
+      description:
+        "Alarme inteligente moderno e fluido desenvolvido especialmente para dispositivos Wear OS.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/kotlin/kotlin.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/acorda_ai",
+      linkImage:
+        "https://github.com/davigomesflorencio/acorda_ai/raw/master/screenshots/screen_shoot_1_alarm_wear_app.png",
+    },
+
+    {
+      title: "davigomesflorencio",
+      description: "Configuração de perfil especial do GitHub.",
+      logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/davigomesflorencio",
+      linkImage:
+        "https://camo.githubusercontent.com/d399feb3c61ef9cdec603f878aa5292386c52198f3514ef2ae5ff748ec6c0b20/68747470733a2f2f6e6578742e6f7373696e73696768742e696f2f776964676574732f6f6666696369616c2f616e616c797a652d757365722d636f6e747269627574696f6e2d74696d652d646973747269627574696f6e2f7468756d626e61696c2e706e673f757365725f69643d323034333031313126706572696f643d616c6c5f74696d657326696d6167655f73697a653d6175746f26636f6c6f725f736368656d653d6461726b",
+    },
+    {
       title: "angular_capacitor_pokemon",
       description:
         "Uma aplicação moderna e de alto desempenho desenvolvida com Angular 21 para explorar dados da PokeAPI com busca reativa. Suporte nativo para dispositivos móveis via Capacitor.",
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/angular_capacitor_pokemon",
-    },
-
-    {
-      title: "MusicPlayerFlutter",
-      description:
-        "Reprodutor de música utilizando Material Design em Flutter de código aberto.",
-      logo: "https://th.bing.com/th/id/R.bda3a4487ce803cbd7e47f6171ac4560?rik=43Sg3qT4Fnk3GQ&pid=ImgRaw&r=0",
-      linkText: "View Project",
-      link: "https://github.com/davigomesflorencio/MusicPlayerFlutter",
+      linkImage:
+        "https://github.com/davigomesflorencio/angular_capacitor_pokemon/raw/master/screenshots/foto2.png",
     },
 
     {
@@ -54,8 +67,195 @@ const INFO = {
       logo: "https://th.bing.com/th/id/R.bda3a4487ce803cbd7e47f6171ac4560?rik=43Sg3qT4Fnk3GQ&pid=ImgRaw&r=0",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/scanflow_voice",
+      linkImage:
+        "https://github.com/davigomesflorencio/scanflow_voice/raw/master/assets/1.0.0/Screenshot_20251229_165211.jpg",
     },
 
+    {
+      title: "face_detector_mlkit",
+      description:
+        "Detector de faces inteligente usando Google ML Kit com funcionalidades avançadas de reconhecimento facial em tempo real.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/kotlin/kotlin.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/face_detector_mlkit",
+      linkImage:
+        "https://play-lh.googleusercontent.com/RbvISvBcoMC4-z14nzmzubCVhtrg4CW3vh6k4Gyx8O7Hb5tdGxk69QpXmFrihUlCaQ=w526-h296-rw",
+    },
+
+    {
+      title: "gnix_avocados",
+      description:
+        "Aplicativo de gerenciamento de abacates desenvolvido com Flutter, incluindo rastreamento de inventário e histórico de produções.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_avocados",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_avocados/raw/main/screenshots/0.jpeg",
+    },
+
+    {
+      title: "gnix_learn_doing",
+      description:
+        "Plataforma interativa de aprendizado prático onde os usuários podem aprender fazendo, com exercícios e projetos reais.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_learn_doing",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_learn_doing/raw/main/screenshots/0.jpeg",
+    },
+
+    {
+      title: "gnix_devote",
+      description:
+        "Aplicativo de devocionais diários desenvolvido em Flutter com notificações agendadas e armazenamento de reflexões pessoais.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_devote",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_devote/raw/main/screenshots/0.jpeg",
+    },
+
+    {
+      title: "gnix_notes_watchos",
+      description:
+        "Aplicativo de notas otimizado para watchOS, permitindo criar e sincronizar anotações rapidamente no seu relógio.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_notes_watchos",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_notes_watchos/raw/main/screenshots/0.jpeg",
+    },
+
+    {
+      title: "gnix_touchdown",
+      description:
+        "Aplicativo de futebol americano em Flutter com estatísticas de jogadores, placar ao vivo e análises detalhadas de partidas.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_touchdown",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_touchdown/raw/main/screenshots/1.jpeg",
+    },
+
+    {
+      title: "gnix_africa",
+      description:
+        "Aplicativo educacional sobre continente africano com conteúdo cultural, histórico e geográfico em Flutter.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_africa",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_africa/raw/main/screenshots/photo_2026-02-06%2011.06.07.jpeg",
+    },
+
+    {
+      title: "scanner_gnix_mlkit",
+      description:
+        "Scanner de documentos avançado usando Google ML Kit para detecção de bordas e OCR em tempo real.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/kotlin/kotlin.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/scanner_gnix_mlkit",
+      linkImage:
+        "https://github.com/davigomesflorencio/scanner_gnix_mlkit/raw/main/screenshots/4.jpg",
+    },
+
+    {
+      title: "gnix_fruits",
+      description:
+        "Guia interativo de frutas desenvolvido em Flutter com informações nutricionais, receitas e benefícios à saúde.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_fruits",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_fruits/raw/main/screenshots/1.jpeg",
+    },
+
+    {
+      title: "gnix_pinch",
+      description:
+        "Jogo interativo de gesture touch em Flutter que utiliza detecção de pinch e gestos avançados para gameplay imersivo.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_pinch",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_pinch/raw/main/screenshots/1.jpeg",
+    },
+
+    {
+      title: "gnix_grocery_list",
+      description:
+        "Aplicativo de lista de compras com sincronização em tempo real, categorização de produtos e controle de gastos.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_grocery_list",
+      linkImage: "",
+    },
+
+    {
+      title: "gnix_pet",
+      description:
+        "Aplicativo de cuidados com animais de estimação em Flutter, permitindo agendar consultas, medicações e rastrear saúde.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_pet",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_pet/raw/main/screenshots/1.jpeg",
+    },
+
+    {
+      title: "gnix_hike",
+      description:
+        "Aplicativo de trilhas e caminhadas desenvolvido em Flutter com rastreamento de localização, mapas e logs de atividades.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_hike",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_hike/raw/main/screenshots/1.jpeg",
+    },
+
+    {
+      title: "gnix_async_image",
+      description:
+        "Biblioteca Flutter de otimização e carregamento assíncrono de imagens com cache inteligente e tratamento de erros.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_async_image",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_async_image/raw/main/screenshots/1.jpeg",
+    },
+
+    {
+      title: "gnix_restart",
+      description:
+        "Ferramenta de reinicialização de aplicativo em Flutter com sistema de cache e recuperação de estado.",
+      logo: "./mobile/Swift 1.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_restart",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_restart/raw/main/screenshots/1.jpeg",
+    },
+
+    {
+      title: "kmp-app-paginator",
+      description:
+        "Componente de paginação desenvolvido em Kotlin Multiplatform para uso compartilhado entre Android e iOS.",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/kmp-app-paginator",
+      linkImage:
+        "https://github.com/davigomesflorencio/kmp-app-paginator/raw/main/assets/img1.jpg",
+    },
+
+    {
+      title: "portifolio-react",
+      description:
+        "Portfólio interativo desenvolvido em React mostrando projetos, experiências e habilidades técnicas com design moderno.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/portifolio-react",
+      linkImage:
+        "https://github.com/davigomesflorencio/portifolio-react/raw/master/assets/print.png",
+    },
     {
       title: "posts_architeture_bloc",
       description:
@@ -63,6 +263,7 @@ const INFO = {
       logo: "https://th.bing.com/th/id/R.bda3a4487ce803cbd7e47f6171ac4560?rik=43Sg3qT4Fnk3GQ&pid=ImgRaw&r=0",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/posts_architeture_bloc",
+      linkImage: "",
     },
 
     {
@@ -72,6 +273,7 @@ const INFO = {
       logo: "https://th.bing.com/th/id/R.bda3a4487ce803cbd7e47f6171ac4560?rik=43Sg3qT4Fnk3GQ&pid=ImgRaw&r=0",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/poesias_wear_os",
+      linkImage: "",
     },
 
     {
@@ -81,6 +283,7 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/kotlin/kotlin.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_pokedex",
+      linkImage: "",
     },
 
     {
@@ -90,6 +293,7 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/example_security_api_django",
+      linkImage: "",
     },
 
     {
@@ -99,6 +303,7 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/django_pokemon_api",
+      linkImage: "",
     },
 
     {
@@ -108,6 +313,7 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/api_node_prismajs",
+      linkImage: "",
     },
 
     {
@@ -117,6 +323,7 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/examples_docker_swarm_kubernetes",
+      linkImage: "",
     },
 
     {
@@ -126,6 +333,7 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/kotlin/kotlin.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/test_sensors_smartwatch",
+      linkImage: "",
     },
 
     {
@@ -135,17 +343,8 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/nlw_agents_back_end",
+      linkImage: "",
     },
-
-    {
-      title: "acorda_ai",
-      description:
-        "Alarme inteligente moderno e fluido desenvolvido especialmente para dispositivos Wear OS.",
-      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/kotlin/kotlin.png",
-      linkText: "View Project",
-      link: "https://github.com/davigomesflorencio/acorda_ai",
-    },
-
     {
       title: "nlw_agents_front_end",
       description:
@@ -153,14 +352,7 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/nlw_agents_front_end",
-    },
-
-    {
-      title: "davigomesflorencio",
-      description: "Configuração de perfil especial do GitHub.",
-      logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-      linkText: "View Project",
-      link: "https://github.com/davigomesflorencio/davigomesflorencio",
+      linkImage: "",
     },
   ],
   tecnology: [

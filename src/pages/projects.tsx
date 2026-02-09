@@ -5,6 +5,7 @@ import AllProjects from "../components/projects/allProjects";
 import Footer from "../components/common/fotter";
 import Particles from "../components/common/particles";
 import DomeGallery, { type ImageItem } from "../components/common/domeGallery";
+import ClickSpark from "../components/common/clickSpark";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -91,15 +92,23 @@ const Projects = () => {
         </div>
         <NavBar active="projects" />
         <div className="content-wrapper">
-          <div className="flex flex-col h-full m-0 pt-[120px]">
-            <div className="title !w-full text-center">
-              {t("projects.title")}
-            </div>
+          <ClickSpark
+            sparkColor="#00d3f2"
+            sparkSize={10}
+            sparkRadius={25}
+            sparkCount={8}
+            duration={400}
+          >
+            <div className="flex flex-col h-full m-0 pt-[120px]">
+              <div className="title !w-full text-center">
+                {t("projects.title")}
+              </div>
 
-            <div className="pt-10">
-              <AllProjects />
+              <div className="pt-10">
+                <AllProjects />
+              </div>
             </div>
-          </div>
+          </ClickSpark>
           <div className="page-footer">
             <Footer />
           </div>
