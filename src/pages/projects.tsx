@@ -4,6 +4,7 @@ import NavBar from "../components/common/navBar";
 import AllProjects from "../components/projects/allProjects";
 import Footer from "../components/common/fotter";
 import Particles from "../components/common/particles";
+import DomeGallery, { type ImageItem } from "../components/common/domeGallery";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -11,13 +12,56 @@ const Projects = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const imageDome: ImageItem[] = [
+    {
+      src: "./mobile/android.png",
+      alt: "Android",
+    },
+    {
+      src: "./mobile/apple.png",
+      alt: "Apple",
+    },
+    {
+      src: "./mobile/Dart-Dark 1.png",
+      alt: "Dart",
+    },
+    {
+      src: "./mobile/Firebase-Dark 1.png",
+      alt: "Firebase",
+    },
+    {
+      src: "./mobile/Flutter-Dark 1.png",
+      alt: "Flutter",
+    },
+    {
+      src: "./mobile/Idea-Dark 1.png",
+      alt: "Idea",
+    },
+    {
+      src: "./mobile/Java-Dark 1.png",
+      alt: "Java",
+    },
+    {
+      src: "./mobile/Kotlin-Dark 1.png",
+      alt: "Kotlin",
+    },
+    {
+      src: "./mobile/Ktor-Dark 1.png",
+      alt: "Ktor",
+    },
+    {
+      src: "./mobile/Swift 1.png",
+      alt: "Swift",
+    },
+  ];
+
   return (
     <React.Fragment>
       <div className="page-content">
         <div
           style={{
             width: "100%",
-            height: "30vh",
+            height: "800px",
             position: "absolute",
             marginInline: "auto",
           }}
@@ -32,6 +76,17 @@ const Projects = () => {
             alphaParticles={false}
             disableRotation={false}
             pixelRatio={2}
+          />
+        </div>
+        <div style={{ width: "100vw", height: "80vh" }}>
+          <DomeGallery
+            images={imageDome}
+            fit={0.6}
+            minRadius={300}
+            maxVerticalRotationDeg={0}
+            segments={34}
+            dragDampening={4}
+            grayscale={false}
           />
         </div>
         <NavBar active="projects" />
