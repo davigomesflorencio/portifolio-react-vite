@@ -16,6 +16,7 @@ import Academic from "../components/homepage/academic";
 import Tecnology from "../components/homepage/tecnnology";
 import INFO from "../data/user";
 import Footer from "../components/common/fotter";
+import FadeContent from "../components/common/fadeContent";
 
 const Homepage = () => {
   const { t } = useTranslation();
@@ -54,12 +55,19 @@ const Homepage = () => {
           <div className="flex flex-col items-center w-auto lg:w-auto mt-[150px]">
             <div className="w-[300px] h-[300px] ml-0 lg:ml-0">
               <div className="overflow-hidden rounded-[10%] rotate-3">
-                <img
-                  src="home.jpg"
-                  alt="about"
-                  className="w-full"
-                  fetchPriority="high"
-                />
+                <FadeContent
+                  blur={true}
+                  duration={1000}
+                  ease="ease-out"
+                  initialOpacity={0}
+                >
+                  <img
+                    src="home.jpg"
+                    alt="about"
+                    className="w-full"
+                    fetchPriority="high"
+                  />
+                </FadeContent>
               </div>
             </div>
           </div>
