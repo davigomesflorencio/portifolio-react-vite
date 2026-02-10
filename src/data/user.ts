@@ -343,7 +343,8 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/nlw_agents_back_end",
-      linkImage: "",
+      linkImage:
+        "https://github.com/davigomesflorencio/nlw_agents_back_end/blob/master/screenshots/0.jpeg?raw=true",
     },
     {
       title: "nlw_agents_front_end",
@@ -352,7 +353,8 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/nlw_agents_front_end",
-      linkImage: "",
+      linkImage:
+        "https://github.com/davigomesflorencio/nlw_agents_front_end/raw/master/screenshots/0.jpeg",
     },
   ],
   tecnology: [
