@@ -9,7 +9,11 @@ const ComplementStack = () => {
 
       <div className="flex items-center justify-center">
         <div className="text-[20px] mr-4">
-          <img src="ic_python.webp" alt="Example" className="h-[130px]" />
+          <img
+            src="./back/Python-Dark 1.png"
+            alt="Example"
+            className="h-[130px] w-[130px]"
+          />
         </div>
       </div>
 

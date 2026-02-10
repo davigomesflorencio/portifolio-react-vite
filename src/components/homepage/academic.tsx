@@ -21,13 +21,13 @@ const Academic = () => {
                   className="h-[30px] w-[30px] rounded-full shadow-[0px_4px_10px_rgba(0,0,0,0.1)]"
                 />
                 <div className="flex flex-col ml-4 mr-auto">
-                  <div className="text-[15px] font-bold text-secondary">
+                  <div className="text-[18px] font-bold text-secondary">
                     {work.title}
                   </div>
-                  <div className="text-[15px] text-secondary">
+                  <div className="text-[16px] text-secondary">
                     {work.duration}
                   </div>
-                  <div className="text-[15px] font-bold text-secondary">
+                  <div className="text-[18px] font-bold text-secondary">
                     {work.institution}
                   </div>
                 </div>

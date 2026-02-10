@@ -19,11 +19,18 @@ import FadeContent from "../components/common/fadeContent";
 import GradientText from "../components/common/gradientText";
 import Particles from "../components/common/particles";
 import LogoLoop, { type LogoItem } from "../components/common/logoLoop";
+import TiltedCard from "../components/common/tiltedCard";
 
 const Homepage = () => {
   const { t } = useTranslation();
   const [logoSize, setLogoSize] = useState(80);
   const [oldLogoSize, setOldLogoSize] = useState(80);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const theme = localStorage.getItem("theme");
+    return theme === "dark";
+  });
+
+  const fadeOutColor = isDarkMode ? "#1a1a1a" : "#ffffff";
 
   const imageLogosMobile = [
     {
@@ -171,6 +178,31 @@ const Homepage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Monitorar mudanças de tema
+    const handleThemeChange = () => {
+      const theme = localStorage.getItem("theme");
+      setIsDarkMode(theme === "dark");
+    };
+
+    // Observer para mudanças na classe 'dark' do HTML
+    const observer = new MutationObserver(() => {
+      const theme = localStorage.getItem("theme");
+      setIsDarkMode(theme === "dark");
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    // Listener para mudanças de storage
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", handleThemeChange);
+    };
   }, []);
 
   useEffect(() => {
@@ -219,22 +251,29 @@ const Homepage = () => {
         <NavBar active="home" />
         <div className="content-wrapper">
           <div className="flex flex-col items-center w-auto lg:w-auto mt-[150px]">
-            <div className="w-[300px] h-[300px] ml-0 lg:ml-0">
-              <div className="overflow-hidden rounded-[10%] rotate-3">
-                <FadeContent
-                  blur={true}
-                  duration={1000}
-                  ease="ease-out"
-                  initialOpacity={0}
-                >
-                  <img
-                    src="home.jpg"
-                    alt="about"
-                    className="w-full"
-                    fetchPriority="high"
-                  />
-                </FadeContent>
-              </div>
+            <div className="w-75 h-75 ml-0 lg:ml-0">
+              <FadeContent
+                blur={true}
+                duration={1000}
+                ease="ease-out"
+                initialOpacity={0}
+              >
+                <TiltedCard
+                  imageSrc="home.jpg"
+                  altText="Davi Gomes Florencio"
+                  captionText="Davi Gomes Florencio"
+                  containerHeight="300px"
+                  containerWidth="300px"
+                  imageHeight="300px"
+                  imageWidth="300px"
+                  rotateAmplitude={12}
+                  scaleOnHover={1.05}
+                  showMobileWarning={false}
+                  showTooltip
+                  displayOverlayContent
+                  // overlayContent={}
+                />
+              </FadeContent>
             </div>
           </div>
 
@@ -336,7 +375,7 @@ const Homepage = () => {
                 hoverSpeed={0}
                 scaleOnHover
                 fadeOut
-                fadeOutColor="#ffffff"
+                fadeOutColor={fadeOutColor}
                 ariaLabel="Technology partners"
               />
             </div>
@@ -362,7 +401,7 @@ const Homepage = () => {
                 hoverSpeed={0}
                 scaleOnHover
                 fadeOut
-                fadeOutColor="#ffffff"
+                fadeOutColor={fadeOutColor}
                 ariaLabel="Technology partners"
               />
             </div>
@@ -388,7 +427,7 @@ const Homepage = () => {
                 hoverSpeed={0}
                 scaleOnHover
                 fadeOut
-                fadeOutColor="#ffffff"
+                fadeOutColor={fadeOutColor}
                 ariaLabel="Technology partners"
               />
             </div>
