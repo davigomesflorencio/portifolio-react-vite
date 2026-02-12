@@ -1,5 +1,5 @@
 <div>
-<img src="assets/print2.png" alt="drawing" style="width:auto;"/>
+<img src="assets/1.gif" alt="drawing" style="width:auto;"/>
 
 <div>
 
