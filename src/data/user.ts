@@ -30,6 +30,16 @@ const INFO = {
 
   projects: [
     {
+      title: "Todo App Swift",
+      description:
+        "A modern, elegant, and customizable To-Do application built with SwiftUI and powered by Core Data.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/swift/swift.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_todo_app",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_todo_app/raw/main/screenshots/0.jpeg",
+    },
+    {
       title: "acorda_ai",
       description:
         "Alarme inteligente moderno e fluido desenvolvido especialmente para dispositivos Wear OS.",
@@ -263,7 +273,8 @@ const INFO = {
       logo: "https://th.bing.com/th/id/R.bda3a4487ce803cbd7e47f6171ac4560?rik=43Sg3qT4Fnk3GQ&pid=ImgRaw&r=0",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/posts_architeture_bloc",
-      linkImage: "https://github.com/davigomesflorencio/posts_architeture_bloc/raw/master/screenshots/0.jpeg",
+      linkImage:
+        "https://github.com/davigomesflorencio/posts_architeture_bloc/raw/master/screenshots/0.jpeg",
     },
 
     {
@@ -273,7 +284,8 @@ const INFO = {
       logo: "https://th.bing.com/th/id/R.bda3a4487ce803cbd7e47f6171ac4560?rik=43Sg3qT4Fnk3GQ&pid=ImgRaw&r=0",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/poesias_wear_os",
-      linkImage: "https://github.com/davigomesflorencio/poesias_wear_os/raw/master/screenshots/0.jpeg",
+      linkImage:
+        "https://github.com/davigomesflorencio/poesias_wear_os/raw/master/screenshots/0.jpeg",
     },
 
     {
@@ -283,7 +295,8 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/kotlin/kotlin.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_pokedex",
-      linkImage: "https://github.com/davigomesflorencio/gnix_pokedex/raw/master/screenshots/0.jpeg",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_pokedex/raw/master/screenshots/0.jpeg",
     },
     {
       title: "Challenge Ionic",
@@ -343,7 +356,8 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/kotlin/kotlin.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/test_sensors_smartwatch",
-      linkImage: "https://github.com/davigomesflorencio/test_sensors_smartwatch/raw/master/screenshots/0.jpeg",
+      linkImage:
+        "https://github.com/davigomesflorencio/test_sensors_smartwatch/raw/master/screenshots/0.jpeg",
     },
 
     {
