@@ -263,7 +263,7 @@ const INFO = {
       logo: "https://th.bing.com/th/id/R.bda3a4487ce803cbd7e47f6171ac4560?rik=43Sg3qT4Fnk3GQ&pid=ImgRaw&r=0",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/posts_architeture_bloc",
-      linkImage: "",
+      linkImage: "https://github.com/davigomesflorencio/posts_architeture_bloc/raw/master/screenshots/0.jpeg",
     },
 
     {
@@ -273,7 +273,7 @@ const INFO = {
       logo: "https://th.bing.com/th/id/R.bda3a4487ce803cbd7e47f6171ac4560?rik=43Sg3qT4Fnk3GQ&pid=ImgRaw&r=0",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/poesias_wear_os",
-      linkImage: "",
+      linkImage: "https://github.com/davigomesflorencio/poesias_wear_os/raw/master/screenshots/0.jpeg",
     },
 
     {
@@ -283,7 +283,17 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/kotlin/kotlin.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_pokedex",
-      linkImage: "",
+      linkImage: "https://github.com/davigomesflorencio/gnix_pokedex/raw/master/screenshots/0.jpeg",
+    },
+    {
+      title: "Challenge Ionic",
+      description:
+        "Aplicativo de demonstração Ionic + Angular + Capacitor com integração ao Firebase (Firestore).",
+      logo: "https://www.pikpng.com/pngl/b/381-3810329_ionic-framework-icon-clipart.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/challenge_ionic",
+      linkImage:
+        "https://github.com/davigomesflorencio/challenge_ionic/raw/master/screenshots/0.jpeg",
     },
 
     {
@@ -317,7 +327,7 @@ const INFO = {
     },
 
     {
-      title: "examples_docker_swarm_kubernetes",
+      title: "Docker Exemplos",
       description:
         "Guia prático de uso e orquestração com Docker, Docker Swarm, Kubernetes e Minikube.",
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
@@ -333,7 +343,7 @@ const INFO = {
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/kotlin/kotlin.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/test_sensors_smartwatch",
-      linkImage: "",
+      linkImage: "https://github.com/davigomesflorencio/test_sensors_smartwatch/raw/master/screenshots/0.jpeg",
     },
 
     {

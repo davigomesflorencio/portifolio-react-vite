@@ -27,7 +27,7 @@ const Footer = () => {
 
         <div className="md:order-2">
           <div className="text-[14px] text-tertiary">
-            © 2024 Davi Gomes Florencio. {t("footer.rights")}
+            © 2026 Davi Gomes Florencio. {t("footer.rights")}
           </div>
         </div>
       </div>
