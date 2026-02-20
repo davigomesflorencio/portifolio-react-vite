@@ -14,20 +14,22 @@ const Works = () => {
         body={
           <div className="flex flex-col gap-6 mb-8 ">
             {INFO.works.map((work, index) => (
-              <div className="flex items-center w-full" key={index}>
+              <div className="flex flex-row items-start w-full" key={index}>
                 <img
                   src={work.logo}
                   alt={work.company}
-                  className="h-[30px] w-[30px] rounded-full shadow-[0px_4px_10px_rgba(0,0,0,0.1)]"
+                  className="h-[30px] w-[30px] rounded-full shadow-[0px_4px_10px_rgba(0,0,0,0.1)] mt-1"
                 />
-                <div className="flex flex-col ml-4 mr-auto">
-                  <div className="text-[18px] font-bold text-secondary">
-                    {work.company}
+                <div className="flex flex-col flex-1 ml-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex flex-col">
+                    <div className="text-[18px] font-bold text-secondary">
+                      {work.company}
+                    </div>
+                    <div className="text-[16px] text-secondary">{work.title}</div>
                   </div>
-                  <div className="text-[16px] text-secondary">{work.title}</div>
-                </div>
-                <div className="text-[18px] text-tertiary whitespace-nowrap ml-4">
-                  {work.duration}
+                  <div className="text-[18px] text-tertiary whitespace-nowrap sm:ml-4 mt-1 sm:mt-0">
+                    {work.duration}
+                  </div>
                 </div>
               </div>
             ))}
