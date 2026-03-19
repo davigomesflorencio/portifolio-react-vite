@@ -25,7 +25,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/playstore" element={<PlayStore />} />
         <Route path="/screenshot" element={<ScreenshotGnix />} />
-        <Route path="/scannermlkit" element={<ScannerMLKit />} />
+        <Route path="/scanner-mlkit" element={<ScannerMLKit />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </div>
