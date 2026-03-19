@@ -385,7 +385,7 @@ const ScreenshotGnix = () => {
 
             <div className="flex gap-4 mt-2">
               <a
-                href="https://github.com/davigomesflorencio/screenshot_gnix_kmp"
+                href="https://github.com/davigomesflorencio/screenshot_kmp_gnix"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-black dark:text-white bg-cyan-400 hover:bg-cyan-500 rounded-lg transition-all duration-300 shadow-lg"
