@@ -23,7 +23,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/playstore" element={<PlayStore />} />
-        <Route path="/screenshotgnix" element={<ScreenshotGnix />} />
+        <Route path="/screenshot" element={<ScreenshotGnix />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </div>
