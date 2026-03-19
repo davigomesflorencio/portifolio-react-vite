@@ -8,6 +8,7 @@ import Projects from "./pages/projects";
 import Notfound from "./pages/404";
 import Contact from "./pages/contact";
 import PlayStore from "./pages/playstore";
+import ScreenshotGnix from "./pages/screenshotgnix";
 
 export default function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/playstore" element={<PlayStore />} />
+        <Route path="/screenshotgnix" element={<ScreenshotGnix />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </div>
