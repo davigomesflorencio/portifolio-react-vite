@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.davi.dev.face_detect_scan",
+      "sha256_cert_fingerprints": [
+        "62:9B:2D:45:EB:06:7D:70:3F:21:EF:5A:AD:07:EA:6A:77:EE:76:05:12:12:81:99:63:99:D9:62:09:0F:0C:1E"
+      ]
+    }
+  }
+]
