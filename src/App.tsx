@@ -9,6 +9,7 @@ import Notfound from "./pages/404";
 import Contact from "./pages/contact";
 import PlayStore from "./pages/playstore";
 import ScreenshotGnix from "./pages/screenshotgnix";
+import ScannerMLKit from "./pages/scannermlkit";
 
 export default function App() {
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/playstore" element={<PlayStore />} />
         <Route path="/screenshot" element={<ScreenshotGnix />} />
+        <Route path="/scannermlkit" element={<ScannerMLKit />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </div>
