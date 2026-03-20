@@ -512,6 +512,7 @@ const INFO = {
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.face_detect_scan",
       metrics: "AI/ML | Google ML Kit",
+      detailsLink: "/facedetector-mlkit",
     },
     {
       title: "Text Detector MLKIT",
@@ -530,6 +531,17 @@ const INFO = {
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.scannermlkit",
       metrics: "OCR | Google ML Kit",
+      detailsLink: "/scanner-mlkit",
+    },
+    {
+      title: "Screenshot Gnix",
+      description:
+        "Aplicativo multiplataforma de edição e exportação de screenshots desenvolvido com Kotlin Multiplatform e Compose Multiplatform. Disponível para Android, iOS e Desktop.",
+      logo: "./screenshotgnix/icon.png",
+      linkText: "Ver no GitHub",
+      link: "https://github.com/davigomesflorencio/screenshot_kmp_gnix",
+      metrics: "KMP | Compose Multiplatform",
+      detailsLink: "/screenshot",
     },
   ],
 };

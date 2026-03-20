@@ -16,6 +16,7 @@ const AllApps = () => {
             linkText={app.linkText}
             link={app.link}
             metrics={app.metrics}
+            detailsLink={app.detailsLink}
           />
         </div>
       ))}
