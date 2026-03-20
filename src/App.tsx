@@ -10,6 +10,7 @@ import Contact from "./pages/contact";
 import PlayStore from "./pages/playstore";
 import ScreenshotGnix from "./pages/screenshotgnix";
 import ScannerMLKit from "./pages/scannermlkit";
+import FaceDetector from "./pages/facedetector";
 
 export default function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/playstore" element={<PlayStore />} />
         <Route path="/screenshot" element={<ScreenshotGnix />} />
         <Route path="/scanner-mlkit" element={<ScannerMLKit />} />
+        <Route path="/facedetector" element={<FaceDetector />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </div>
