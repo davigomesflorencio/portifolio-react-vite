@@ -30,6 +30,35 @@ const INFO = {
 
   projects: [
     {
+      title: "wear_gnix_ia",
+      description:
+        "App premium para Wear OS com assistência cognitiva por IA, projetado para telas OLED circulares de smartwatches com resposta fluida e elegante.",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/wear_gnix_ia",
+      linkImage: "",
+    },
+    {
+      title: "nlw_operator",
+      description:
+        "Projeto NLW Operator explorando fundamentos de visão computacional via implementação da rede neural LeNet-5 usando PyTorch.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/nlw_operator",
+      linkImage:
+        "https://github.com/davigomesflorencio/nlw_operator/raw/master/assets/photo.png",
+    },
+    {
+      title: "gnix_honeymoon",
+      description:
+        "App iOS interativo em SwiftUI que ajuda casais a escolher o destino perfeito de lua de mel através de navegação intuitiva baseada em gestos.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/swift/swift.png",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/gnix_honeymoon",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_honeymoon/raw/main/screenshots/1.png",
+    },
+    {
       title: "Todo App Swift",
       description:
         "A modern, elegant, and customizable To-Do application built with SwiftUI and powered by Core Data.",
@@ -47,7 +76,7 @@ const INFO = {
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/acorda_ai",
       linkImage:
-        "https://github.com/davigomesflorencio/acorda_ai/raw/master/screenshots/screen_shoot_1_alarm_wear_app.png",
+        "https://github.com/davigomesflorencio/acorda_ai/raw/master/screenshots/photo.jpeg",
     },
 
     {
@@ -57,7 +86,7 @@ const INFO = {
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/davigomesflorencio",
       linkImage:
-        "https://camo.githubusercontent.com/d399feb3c61ef9cdec603f878aa5292386c52198f3514ef2ae5ff748ec6c0b20/68747470733a2f2f6e6578742e6f7373696e73696768742e696f2f776964676574732f6f6666696369616c2f616e616c797a652d757365722d636f6e747269627574696f6e2d74696d652d646973747269627574696f6e2f7468756d626e61696c2e706e673f757365725f69643d323034333031313126706572696f643d616c6c5f74696d657326696d6167655f73697a653d6175746f26636f6c6f725f736368656d653d6461726b",
+        "https://camo.githubusercontent.com/04324691dae5beab982456a94dc25129642edd65896e199f4153b20d4f4e7e9b/68747470733a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f73746174733f757365726e616d653d64617669676f6d6573666c6f72656e63696f267468656d653d746f6b796f6e69676874",
     },
     {
       title: "angular_capacitor_pokemon",
@@ -89,7 +118,7 @@ const INFO = {
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/face_detector_mlkit",
       linkImage:
-        "https://play-lh.googleusercontent.com/RbvISvBcoMC4-z14nzmzubCVhtrg4CW3vh6k4Gyx8O7Hb5tdGxk69QpXmFrihUlCaQ=w526-h296-rw",
+        "https://play-lh.googleusercontent.com/v44IsgEIXueExWA7eNiBTvS2FzGKYmDbX2I5tL-xEV5ZN7XGAZG2htGT7uwsB-BNEYM=w2560-h1440-rw",
     },
 
     {
