@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import {
   faGithub,
   faInstagram,
+  faLinkedin,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { faDownload, faMailBulk } from "@fortawesome/free-solid-svg-icons";
@@ -314,6 +315,16 @@ const Homepage = () => {
                 <a href={INFO.socials.github} target="_blank" rel="noreferrer">
                   <FontAwesomeIcon
                     icon={faGithub}
+                    className="pr-5 text-[35px] text-secondary hover:text-primary transition-colors duration-200"
+                  />
+                </a>
+                <a
+                  href={INFO.socials.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
                     className="pr-5 text-[35px] text-secondary hover:text-primary transition-colors duration-200"
                   />
                 </a>
