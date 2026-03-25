@@ -32,13 +32,24 @@ const INFO = {
 
   projects: [
     {
+      title: "curso_aws_clf02_udemy",
+      description:
+        "ste repositório contém resumos detalhados para a certificação AWS Certified Cloud Practitioner (CLF-C02), baseados no conteúdo oficial e nas melhores práticas da AWS.",
+      logo: "https://th.bing.com/th/id/R.01291bcd5d5bb41e503efb8ae01e05d2?rik=AJOrnujEXubM0Q&pid=ImgRaw&r=0",
+      linkText: "View Project",
+      link: "https://github.com/davigomesflorencio/curso_aws_clf02_udemy",
+      linkImage:
+        "https://github.com/davigomesflorencio/curso_aws_clf02_udemy/raw/master/photo.jpeg",
+    },
+    {
       title: "wear_gnix_ia",
       description:
         "App premium para Wear OS com assistência cognitiva por IA, projetado para telas OLED circulares de smartwatches com resposta fluida e elegante.",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/wear_gnix_ia",
-      linkImage: "",
+      linkImage:
+        "https://github.com/davigomesflorencio/wear_gnix_ia/raw/main/screenshots/photo.jpeg",
     },
     {
       title: "nlw_operator",
@@ -197,7 +208,7 @@ const INFO = {
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/scanner_gnix_mlkit",
       linkImage:
-        "https://github.com/davigomesflorencio/scanner_gnix_mlkit/raw/main/screenshots/4.jpg",
+        "https://github.com/davigomesflorencio/scanner_gnix_mlkit/raw/main/screenshots/panel.jpeg",
     },
 
     {
@@ -229,7 +240,8 @@ const INFO = {
       logo: "./mobile/Swift 1.png",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_grocery_list",
-      linkImage: "",
+      linkImage:
+        "https://github.com/davigomesflorencio/gnix_grocery_list/raw/main/screenshots/photo.jpeg",
     },
 
     {
