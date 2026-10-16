@@ -9,6 +9,7 @@ import {
 import { faDownload, faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 import NavBar from "../components/common/navBar";
 import Works from "../components/homepage/works";
@@ -21,9 +22,11 @@ import GradientText from "../components/common/gradientText";
 import Particles from "../components/common/particles";
 import LogoLoop, { type LogoItem } from "../components/common/logoLoop";
 import TiltedCard from "../components/common/tiltedCard";
+import useSeo from "../components/common/useSeo";
 
 const Homepage = () => {
   const { t } = useTranslation();
+  useSeo(t("seo.home.title"), t("seo.home.description"), "/");
   const [logoSize, setLogoSize] = useState(80);
   const [oldLogoSize, setOldLogoSize] = useState(80);
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -281,7 +284,8 @@ const Homepage = () => {
           <div className="pt-[50px]">
             <div className="flex flex-col lg:flex-row justify-between items-center">
               <div className="flex flex-col items-start lg:order-2">
-                <div className="title !w-[100%] lg:!w-[100%] mt-5 lg:mt-0 text-center">
+                <h1 className="title !w-[100%] lg:!w-[100%] mt-5 lg:mt-0 text-center">
+                  <span className="sr-only">{INFO.main.name} — </span>
                   <GradientText
                     colors={["#258176", "#CF85CD", "#00d3f2"]}
                     animationSpeed={8}
@@ -290,7 +294,7 @@ const Homepage = () => {
                   >
                     {t("homepage.title")}
                   </GradientText>
-                </div>
+                </h1>
 
                 <div className="subtitle !w-[100%] lg:!w-[100%] mt-[10px] lg:mt-[25px]">
                   {t("homepage.description")}
@@ -307,6 +311,27 @@ const Homepage = () => {
                     Download CV
                   </a>
                 </div>
+
+                <nav className="flex flex-wrap justify-center gap-4 w-full mt-6 text-[16px] font-bold">
+                  <Link
+                    to="/projects"
+                    className="text-secondary hover:text-accent transition-colors duration-200"
+                  >
+                    {t("homepage.seeProjects")} →
+                  </Link>
+                  <Link
+                    to="/playstore"
+                    className="text-secondary hover:text-accent transition-colors duration-200"
+                  >
+                    {t("homepage.seeApps")} →
+                  </Link>
+                  <Link
+                    to="/about"
+                    className="text-secondary hover:text-accent transition-colors duration-200"
+                  >
+                    {t("homepage.aboutMe")} →
+                  </Link>
+                </nav>
               </div>
             </div>
 
@@ -362,7 +387,7 @@ const Homepage = () => {
             </div>
 
             <div className="w-full mt-10 title text-center">
-              <h2>Tecnologias</h2>
+              <h2>{t("homepage.technologies")}</h2>
             </div>
 
             <div className="w-full mt-5 subtitle text-center">

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import useSeo from "../components/common/useSeo";
 import NavBar from "../components/common/navBar";
 
 import ContactForm from "../components/contact/contactForm";
@@ -9,6 +10,7 @@ import Particles from "../components/common/particles";
 
 const Contact = () => {
   const { t } = useTranslation();
+  useSeo(t("seo.contact.title"), t("seo.contact.description"), "/contact");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -39,9 +41,9 @@ const Contact = () => {
         <NavBar active="contact" />
         <div className="content-wrapper">
           <div className="flex flex-col justify-around mt-[120px] mb-9 dark:text-[#f4f4f5]">
-            <div className="title !w-full text-center">
+            <h1 className="title !w-full text-center">
               {t("contact.title")}
-            </div>
+            </h1>
 
             <div className="subtitle !w-full">
               {t("contact.description")}

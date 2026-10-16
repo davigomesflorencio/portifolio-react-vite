@@ -18,6 +18,9 @@ const Footer = () => {
             <li className="mr-5 text-[14px] font-bold text-secondary hover:text-primary transition-colors duration-200">
               <Link to="/projects">{t("nav.projects")}</Link>
             </li>
+            <li className="mr-5 text-[14px] font-bold text-secondary hover:text-primary transition-colors duration-200">
+              <Link to="/playstore">{t("nav.playstore")}</Link>
+            </li>
 
             <li className="mr-5 text-[14px] font-bold text-secondary hover:text-primary transition-colors duration-200">
               <Link to="/contact">{t("nav.contact")}</Link>

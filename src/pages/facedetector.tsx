@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import useSeo from "../components/common/useSeo";
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/fotter";
 import Particles from "../components/common/particles";
@@ -223,6 +225,8 @@ const features = [
 ];
 
 const FaceDetector = () => {
+  const { t } = useTranslation();
+  useSeo(t("seo.facedetector.title"), t("seo.facedetector.description"), "/facedetector-mlkit");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -265,7 +269,7 @@ const FaceDetector = () => {
               />
             </div>
 
-            <div className="title w-full!">
+            <h1 className="title w-full!">
               <GradientText
                 colors={["#258176", "#CF85CD", "#00d3f2"]}
                 animationSpeed={8}
@@ -274,7 +278,7 @@ const FaceDetector = () => {
               >
                 Face Detector DF MLKit
               </GradientText>
-            </div>
+            </h1>
 
             <p className="subtitle max-w-2xl">
               Aplicativo Android de detecção facial em tempo real utilizando o{" "}

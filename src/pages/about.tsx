@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import useSeo from "../components/common/useSeo";
 
 import NavBar from "../components/common/navBar";
 import Socials from "../components/about/socials";
@@ -17,6 +18,7 @@ const position: [number, number] = [-4.979116, -39.056291];
 
 const About = () => {
   const { t } = useTranslation();
+  useSeo(t("seo.about.title"), t("seo.about.description"), "/about");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -49,9 +51,9 @@ const About = () => {
           <div className="flex flex-col h-full m-0 pt-[120px] max-sm:pt-[60px] ">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-full">
-                <div className="title !w-full text-center">
+                <h1 className="title !w-full text-center">
                   {t("about.title")}
-                </div>
+                </h1>
 
                 <div className="subtitle !w-full max-lg:pt-5 dark:text-[#f4f4f5]">
                   {t("about.greeting")}

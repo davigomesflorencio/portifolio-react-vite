@@ -9,14 +9,6 @@ export default defineConfig({
     tailwindcss(),
     createHtmlPlugin({
       minify: true,
-      inject: {
-        data: {
-          title: "Davi Gomes Florencio",
-          description: "Personal portfolio template built using Reactjs",
-          keywords: "react,typescript,vite",
-          author: "Davi Gomes Florencio",
-        },
-      },
     }),
   ],
 });
