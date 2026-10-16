@@ -260,8 +260,10 @@ const FaceDetector = () => {
           <div className="flex flex-col items-center text-center pt-[120px] gap-6">
             <div className="flex items-center justify-center w-24 h-24 bg-[#fafafa] dark:bg-[#27272a] rounded-2xl shadow-lg">
               <img
-                src="./facedetector/icon.png"
-                alt="Icon App Face Detector"
+                src="/facedetector/icon.webp"
+                alt="Ícone do app Face Detector DF MLKit"
+                width={96}
+                height={96}
                 className="w-full h-auto object-cover rounded-2xl"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = "none";
@@ -313,33 +315,6 @@ const FaceDetector = () => {
               >
                 Ver na Play Store
               </a>
-            </div>
-          </div>
-
-          {/* Screenshots Section */}
-          <div className="mt-16 text-center">
-            <h2 className="title text-center mb-8">Screenshots</h2>
-            <div className="flex flex-wrap justify-center gap-6">
-              {[
-                "./facedetector/1.png",
-                "./facedetector/2.png",
-                "./facedetector/3.png",
-                "./facedetector/4.png",
-              ].map((src, i) => (
-                <div
-                  key={i}
-                  className="rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-zinc-700 max-w-[280px] w-full"
-                >
-                  <img
-                    src={src}
-                    alt={`Screenshot ${i + 1}`}
-                    className="w-full h-auto object-cover"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
-                  />
-                </div>
-              ))}
             </div>
           </div>
 

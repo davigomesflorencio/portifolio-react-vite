@@ -27,7 +27,11 @@ const AppCard: React.FC<AppCardProps> = (props) => {
         <div className="flex justify-center mx-auto w-24 h-24 mb-6">
           <img
             src={logo}
-            alt={`${title} logo`}
+            alt={`Ícone do app ${title}`}
+            width={96}
+            height={96}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-contain rounded-2xl shadow-sm"
           />
         </div>

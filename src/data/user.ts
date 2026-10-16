@@ -138,7 +138,7 @@ const INFO = {
       title: "gnix_avocados",
       description:
         "Aplicativo de gerenciamento de abacates desenvolvido com Flutter, incluindo rastreamento de inventário e histórico de produções.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_avocados",
       linkImage:
@@ -149,7 +149,7 @@ const INFO = {
       title: "gnix_learn_doing",
       description:
         "Plataforma interativa de aprendizado prático onde os usuários podem aprender fazendo, com exercícios e projetos reais.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_learn_doing",
       linkImage:
@@ -160,7 +160,7 @@ const INFO = {
       title: "gnix_devote",
       description:
         "Aplicativo de devocionais diários desenvolvido em Flutter com notificações agendadas e armazenamento de reflexões pessoais.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_devote",
       linkImage:
@@ -171,7 +171,7 @@ const INFO = {
       title: "gnix_notes_watchos",
       description:
         "Aplicativo de notas otimizado para watchOS, permitindo criar e sincronizar anotações rapidamente no seu relógio.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_notes_watchos",
       linkImage:
@@ -182,7 +182,7 @@ const INFO = {
       title: "gnix_touchdown",
       description:
         "Aplicativo de futebol americano em Flutter com estatísticas de jogadores, placar ao vivo e análises detalhadas de partidas.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_touchdown",
       linkImage:
@@ -193,7 +193,7 @@ const INFO = {
       title: "gnix_africa",
       description:
         "Aplicativo educacional sobre continente africano com conteúdo cultural, histórico e geográfico em Flutter.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_africa",
       linkImage:
@@ -215,7 +215,7 @@ const INFO = {
       title: "gnix_fruits",
       description:
         "Guia interativo de frutas desenvolvido em Flutter com informações nutricionais, receitas e benefícios à saúde.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_fruits",
       linkImage:
@@ -226,7 +226,7 @@ const INFO = {
       title: "gnix_pinch",
       description:
         "Jogo interativo de gesture touch em Flutter que utiliza detecção de pinch e gestos avançados para gameplay imersivo.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_pinch",
       linkImage:
@@ -237,7 +237,7 @@ const INFO = {
       title: "gnix_grocery_list",
       description:
         "Aplicativo de lista de compras com sincronização em tempo real, categorização de produtos e controle de gastos.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_grocery_list",
       linkImage:
@@ -248,7 +248,7 @@ const INFO = {
       title: "gnix_pet",
       description:
         "Aplicativo de cuidados com animais de estimação em Flutter, permitindo agendar consultas, medicações e rastrear saúde.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_pet",
       linkImage:
@@ -259,7 +259,7 @@ const INFO = {
       title: "gnix_hike",
       description:
         "Aplicativo de trilhas e caminhadas desenvolvido em Flutter com rastreamento de localização, mapas e logs de atividades.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_hike",
       linkImage:
@@ -270,7 +270,7 @@ const INFO = {
       title: "gnix_async_image",
       description:
         "Biblioteca Flutter de otimização e carregamento assíncrono de imagens com cache inteligente e tratamento de erros.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_async_image",
       linkImage:
@@ -281,7 +281,7 @@ const INFO = {
       title: "gnix_restart",
       description:
         "Ferramenta de reinicialização de aplicativo em Flutter com sistema de cache e recuperação de estado.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_restart",
       linkImage:
@@ -463,13 +463,13 @@ const INFO = {
       institution: "UFC Campus Quixadá",
       title: "Graduação em Ciência da Computação",
       duration: "Fev 2017 - Dez 2022",
-      logo: "https://www.quixada.ufc.br/wp-content/uploads/2017/10/logo.png",
+      logo: "/logos/ufc-quixada.webp",
     },
     {
       institution: "EEEP Capelão Frei Orlando",
       title: "Técnico em Informática",
       duration: "Jan 2014 - Dez 2016",
-      logo: "https://tse3.mm.bing.net/th/id/OIP.jh1jrJNAo76vYpVTTU3vhwHaIz?rs=1&pid=ImgDetMain&o=7&rm=3",
+      logo: "/logos/governo-do-ceara.webp",
     },
   ],
   works: [
@@ -477,37 +477,37 @@ const INFO = {
       company: "Insight Data Science Lab",
       title: "Desenvolvedor Mobile Pleno",
       duration: "Mar 2023 - Dez 2025",
-      logo: "https://media.licdn.com/dms/image/v2/C4E0BAQHRenzZYaNO7A/company-logo_100_100/company-logo_100_100/0/1636132936592/insight_data_science_lab_logo?e=1770249600&v=beta&t=NqEAp6PhspyTb-IhRXDUqWTdA0FAB0Hf8MQnd11TuAk",
+      logo: "/logos/insight-data-science-lab.webp",
     },
     {
       company: "NEX2ME",
       title: "Desenvolvedor Full Stack",
       duration: "Set 2022 - Dez 2022",
-      logo: "https://media.licdn.com/dms/image/v2/C560BAQGV0tUDA713ag/company-logo_100_100/company-logo_100_100/0/1631389427373?e=1770249600&v=beta&t=HJCRWBpsLWvotCya7gDEAU0EcSMfHuzJcSCbEKJ5ddw",
+      logo: "/logos/nex2me.webp",
     },
     {
       company: "Secretaria de Segurança Pública",
       title: "Desenvolvedor Back-end",
       duration: "Mar 2022 - Nov 2022",
-      logo: "https://media.licdn.com/dms/image/v2/C510BAQGltjGSEeo4Tw/company-logo_100_100/company-logo_100_100/0/1631322299333?e=1770249600&v=beta&t=EnBrbkIRL6j3U7WNWBrNv0S-xbwZv6hEbrA_yKuIHiw",
+      logo: "/logos/governo-do-ceara.webp",
     },
     {
       company: "UFC Campus Quixadá",
       title: "Desenvolvedor Flutter",
       duration: "Mar 2022 - Jul 2022",
-      logo: "https://www.quixada.ufc.br/wp-content/uploads/2017/10/logo.png",
+      logo: "/logos/ufc-quixada.webp",
     },
     {
       company: "Universidade Federal do Ceará",
       title: "Bolsista PID",
       duration: "Ago 2020 - Jan 2022",
-      logo: "https://www.quixada.ufc.br/wp-content/uploads/2017/10/logo.png",
+      logo: "/logos/ufc-quixada.webp",
     },
     {
       company: "IFCE Campus Canindé",
       title: "Suporte Técnico",
       duration: "Jul 2016 - Jan 2017",
-      logo: "https://tse4.mm.bing.net/th/id/OIP.vnyuhQ0fki0gSwNv-QaDjgHaGW?rs=1&pid=ImgDetMain&o=7&rm=3",
+      logo: "/logos/ifce.webp",
     },
   ],
   playstore: [
@@ -580,7 +580,7 @@ const INFO = {
       title: "Screenshot Gnix",
       description:
         "Aplicativo multiplataforma de edição e exportação de screenshots desenvolvido com Kotlin Multiplatform e Compose Multiplatform. Disponível para Android, iOS e Desktop.",
-      logo: "./screenshotgnix/icon.png",
+      logo: "/screenshotgnix/icon.webp",
       linkText: "Ver no GitHub",
       link: "https://github.com/davigomesflorencio/screenshot_kmp_gnix",
       metrics: "KMP | Compose Multiplatform",

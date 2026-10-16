@@ -250,8 +250,10 @@ const ScannerMLKit = () => {
           <div className="flex flex-col items-center text-center pt-[120px] gap-6">
             <div className="flex items-center justify-center w-24 h-24 bg-[#fafafa] dark:bg-[#27272a] rounded-2xl shadow-lg">
               <img
-                src="./scannermlkit/icon.png"
-                alt="Icon App Scanner MLKIT"
+                src="/scannermlkit/icon.webp"
+                alt="Ícone do app Scanner MLKIT"
+                width={96}
+                height={96}
                 className="w-full h-auto object-cover rounded-2xl"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = "none";
@@ -296,11 +298,11 @@ const ScannerMLKit = () => {
             <h2 className="title text-center mb-8">Screenshots</h2>
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                "./scannermlkit/1.png",
-                "./scannermlkit/2.png",
-                "./scannermlkit/3.png",
-                "./scannermlkit/4.png",
-                "./scannermlkit/5.png",
+                "/scannermlkit/1.webp",
+                "/scannermlkit/2.webp",
+                "/scannermlkit/3.webp",
+                "/scannermlkit/4.webp",
+                "/scannermlkit/5.webp",
               ].map((src, i) => (
                 <div
                   key={i}
@@ -308,7 +310,11 @@ const ScannerMLKit = () => {
                 >
                   <img
                     src={src}
-                    alt={`Screenshot ${i + 1}`}
+                    alt={`Tela ${i + 1} do app Scanner MLKIT`}
+                    width={720}
+                    height={1280}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto object-cover"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";

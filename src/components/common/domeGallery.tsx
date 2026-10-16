@@ -915,6 +915,7 @@ export default function DomeGallery({
                   >
                     <img
                       src={it.src}
+                      decoding="async"
                       draggable={false}
                       alt={it.alt}
                       className="w-full h-full object-cover pointer-events-none"

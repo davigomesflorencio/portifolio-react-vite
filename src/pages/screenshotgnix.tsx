@@ -343,8 +343,10 @@ const ScreenshotGnix = () => {
           <div className="flex flex-col items-center text-center pt-[120px] gap-6">
             <div className="flex items-center justify-center w-24 h-24 bg-[#fafafa] dark:bg-[#27272a] rounded-2xl shadow-lg">
               <img
-                src="./screenshotgnix/icon.png"
-                alt={`Icon App`}
+                src="/screenshotgnix/icon.webp"
+                alt="Ícone do app Screenshot Gnix"
+                width={96}
+                height={96}
                 className="w-full h-auto object-cover rounded-2xl"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = "none";
@@ -404,10 +406,10 @@ const ScreenshotGnix = () => {
             <h2 className="title text-center mb-8">Screenshots</h2>
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                "./screenshotgnix/1.png",
-                "./screenshotgnix/2.png",
-                "./screenshotgnix/3.png",
-                "./screenshotgnix/4.png",
+                "/screenshotgnix/1.webp",
+                "/screenshotgnix/2.webp",
+                "/screenshotgnix/3.webp",
+                "/screenshotgnix/4.webp",
               ].map((src, i) => (
                 <div
                   key={i}
@@ -415,7 +417,11 @@ const ScreenshotGnix = () => {
                 >
                   <img
                     src={src}
-                    alt={`Screenshot ${i + 1}`}
+                    alt={`Tela ${i + 1} do app Screenshot Gnix`}
+                    width={500}
+                    height={1068}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto object-cover"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";

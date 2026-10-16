@@ -23,7 +23,11 @@ const Project = (props: ProjectProps) => {
             <div className="flex flex-row justify-start items-start gap-3 ">
               <img
                 src={logo}
-                alt="logo"
+                alt={`Logo do projeto ${title}`}
+                width={80}
+                height={80}
+                loading="lazy"
+                decoding="async"
                 className="w-20 h-20 object-contain flex-shrink-0 mt-10"
               />
               <div className="flex flex-col w-full ">
@@ -42,7 +46,9 @@ const Project = (props: ProjectProps) => {
               <div className="flex justify-center mx-auto w-auto h-60 mb-4">
                 <img
                   src={linkImage}
-                  alt="logo"
+                  alt={`Tela do projeto ${title}`}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: "100%",
                     height: "220px",
