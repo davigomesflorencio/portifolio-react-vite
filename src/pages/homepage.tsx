@@ -38,52 +38,52 @@ const Homepage = () => {
 
   const imageLogosMobile = [
     {
-      src: "./mobile/android.png",
+      src: "/mobile/android.webp",
       alt: "Android",
       href: "https://android.com",
     },
     {
-      src: "./mobile/apple.png",
+      src: "/mobile/apple.webp",
       alt: "Apple",
       href: "https://www.apple.com/",
     },
     {
-      src: "./mobile/Dart-Dark 1.png",
+      src: "/mobile/dart.webp",
       alt: "Dart",
       href: "https://dart.dev",
     },
     {
-      src: "./mobile/Firebase-Dark 1.png",
+      src: "/mobile/firebase.webp",
       alt: "Firebase",
       href: "https://firebase.google.com/",
     },
     {
-      src: "./mobile/Flutter-Dark 1.png",
+      src: "/mobile/flutter.webp",
       alt: "Flutter",
       href: "https://flutter.dev/",
     },
     {
-      src: "./mobile/Idea-Dark 1.png",
+      src: "/mobile/idea.webp",
       alt: "Idea",
       href: "https://www.jetbrains.com/idea/",
     },
     {
-      src: "./mobile/Java-Dark 1.png",
+      src: "/mobile/java.webp",
       alt: "Java",
       href: "https://www.java.com/",
     },
     {
-      src: "./mobile/Kotlin-Dark 1.png",
+      src: "/mobile/kotlin.webp",
       alt: "Kotlin",
       href: "https://kotlinlang.org/",
     },
     {
-      src: "./mobile/Ktor-Dark 1.png",
+      src: "/mobile/ktor.webp",
       alt: "Ktor",
       href: "https://ktor.io/",
     },
     {
-      src: "./mobile/Swift 1.png",
+      src: "/mobile/swift.webp",
       alt: "Swift",
       href: "https://developer.apple.com/swift/",
     },
@@ -91,42 +91,42 @@ const Homepage = () => {
 
   const imageLogosFront = [
     {
-      src: "./front/angular.png",
+      src: "/front/angular.webp",
       alt: "Angular",
       href: "https://angular.io/",
     },
     {
-      src: "./front/CSS 1.png",
+      src: "/front/css.webp",
       alt: "CSS",
       href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
     {
-      src: "./front/HTML 1.png",
+      src: "/front/html.webp",
       alt: "HTML",
       href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
     },
     {
-      src: "./front/JavaScript 1.png",
+      src: "/front/javascript.webp",
       alt: "JavaScript",
       href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
     {
-      src: "./front/React-Dark 1.png",
+      src: "/front/react.webp",
       alt: "React",
       href: "https://reactjs.org/",
     },
     {
-      src: "./front/TypeScript 1.png",
+      src: "/front/typescript.webp",
       alt: "TypeScript",
       href: "https://www.typescriptlang.org/",
     },
     {
-      src: "./front/TailwindCSS-Dark 1.png",
+      src: "/front/tailwindcss.webp",
       alt: "TailwindCSS",
       href: "https://tailwindcss.com/",
     },
     {
-      src: "./front/Vite-Dark 1.png",
+      src: "/front/vite.webp",
       alt: "Vite",
       href: "https://vitejs.dev/",
     },
@@ -134,47 +134,47 @@ const Homepage = () => {
 
   const stackBackEnd = [
     {
-      src: "./back/docker.png",
+      src: "/back/docker.webp",
       alt: "Docker",
       href: "https://www.docker.com/",
     },
     {
-      src: "./back/FastAPI 1.png",
+      src: "/back/fastapi.webp",
       alt: "FastAPI",
       href: "https://fastapi.tiangolo.com/",
     },
     {
-      src: "./back/Jenkins-Dark 1.png",
+      src: "/back/jenkins.webp",
       alt: "Jenkins",
       href: "https://jenkins.io/",
     },
     {
-      src: "./back/NodeJS-Dark 1.png",
+      src: "/back/nodejs.webp",
       alt: "NodeJS",
       href: "https://nodejs.org/",
     },
     {
-      src: "./back/Postman 1.png",
+      src: "/back/postman.webp",
       alt: "Postman",
       href: "https://www.postman.com/",
     },
     {
-      src: "./back/Python-Dark 1.png",
+      src: "/back/python.webp",
       alt: "Python",
       href: "https://www.python.org/",
     },
     {
-      src: "./back/RabbitMQ-Dark 1.png",
+      src: "/back/rabbitmq.webp",
       alt: "RabbitMQ",
       href: "https://www.rabbitmq.com/",
     },
     {
-      src: "./back/Sentry 1.png",
+      src: "/back/sentry.webp",
       alt: "Sentry",
       href: "https://sentry.io/",
     },
     {
-      src: "./back/Spring-Dark 1.png",
+      src: "/back/spring.webp",
       alt: "Spring",
       href: "https://spring.io/",
     },
@@ -263,7 +263,7 @@ const Homepage = () => {
                 initialOpacity={0}
               >
                 <TiltedCard
-                  imageSrc="home.jpg"
+                  imageSrc="/home.webp"
                   altText="Davi Gomes Florencio"
                   captionText="Davi Gomes Florencio"
                   containerHeight="300px"

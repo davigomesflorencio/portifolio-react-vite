@@ -17,6 +17,10 @@ const Works = () => {
               <div className="flex flex-row items-start w-full" key={index}>
                 <img
                   src={work.logo}
+                  width={30}
+                  height={30}
+                  loading="lazy"
+                  decoding="async"
                   alt={work.company}
                   className="h-[30px] w-[30px] rounded-full shadow-[0px_4px_10px_rgba(0,0,0,0.1)] mt-1"
                 />

@@ -17,6 +17,10 @@ const Tecnology = () => {
               <div className="flex items-center w-full" key={index}>
                 <img
                   src={work.logo}
+                  width={30}
+                  height={30}
+                  loading="lazy"
+                  decoding="async"
                   alt={work.title}
                   className="h-[30px] w-[30px] rounded-full shadow-[0px_4px_10px_rgba(0,0,0,0.1)]"
                 />

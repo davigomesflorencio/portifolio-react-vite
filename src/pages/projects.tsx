@@ -17,43 +17,43 @@ const Projects = () => {
 
   const imageDome: ImageItem[] = [
     {
-      src: "./mobile/android.png",
+      src: "/mobile/android.webp",
       alt: "Android",
     },
     {
-      src: "./mobile/apple.png",
+      src: "/mobile/apple.webp",
       alt: "Apple",
     },
     {
-      src: "./mobile/Dart-Dark 1.png",
+      src: "/mobile/dart.webp",
       alt: "Dart",
     },
     {
-      src: "./mobile/Firebase-Dark 1.png",
+      src: "/mobile/firebase.webp",
       alt: "Firebase",
     },
     {
-      src: "./mobile/Flutter-Dark 1.png",
+      src: "/mobile/flutter.webp",
       alt: "Flutter",
     },
     {
-      src: "./mobile/Idea-Dark 1.png",
+      src: "/mobile/idea.webp",
       alt: "Idea",
     },
     {
-      src: "./mobile/Java-Dark 1.png",
+      src: "/mobile/java.webp",
       alt: "Java",
     },
     {
-      src: "./mobile/Kotlin-Dark 1.png",
+      src: "/mobile/kotlin.webp",
       alt: "Kotlin",
     },
     {
-      src: "./mobile/Ktor-Dark 1.png",
+      src: "/mobile/ktor.webp",
       alt: "Ktor",
     },
     {
-      src: "./mobile/Swift 1.png",
+      src: "/mobile/swift.webp",
       alt: "Swift",
     },
   ];

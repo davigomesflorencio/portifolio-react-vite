@@ -131,14 +131,14 @@ const INFO = {
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/face_detector_mlkit",
       linkImage:
-        "https://play-lh.googleusercontent.com/v44IsgEIXueExWA7eNiBTvS2FzGKYmDbX2I5tL-xEV5ZN7XGAZG2htGT7uwsB-BNEYM=w2560-h1440-rw",
+        "/projects/face-detector-mlkit.webp",
     },
 
     {
       title: "gnix_avocados",
       description:
         "Aplicativo de gerenciamento de abacates desenvolvido com Flutter, incluindo rastreamento de inventário e histórico de produções.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_avocados",
       linkImage:
@@ -149,7 +149,7 @@ const INFO = {
       title: "gnix_learn_doing",
       description:
         "Plataforma interativa de aprendizado prático onde os usuários podem aprender fazendo, com exercícios e projetos reais.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_learn_doing",
       linkImage:
@@ -160,7 +160,7 @@ const INFO = {
       title: "gnix_devote",
       description:
         "Aplicativo de devocionais diários desenvolvido em Flutter com notificações agendadas e armazenamento de reflexões pessoais.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_devote",
       linkImage:
@@ -171,7 +171,7 @@ const INFO = {
       title: "gnix_notes_watchos",
       description:
         "Aplicativo de notas otimizado para watchOS, permitindo criar e sincronizar anotações rapidamente no seu relógio.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_notes_watchos",
       linkImage:
@@ -182,7 +182,7 @@ const INFO = {
       title: "gnix_touchdown",
       description:
         "Aplicativo de futebol americano em Flutter com estatísticas de jogadores, placar ao vivo e análises detalhadas de partidas.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_touchdown",
       linkImage:
@@ -193,7 +193,7 @@ const INFO = {
       title: "gnix_africa",
       description:
         "Aplicativo educacional sobre continente africano com conteúdo cultural, histórico e geográfico em Flutter.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_africa",
       linkImage:
@@ -215,7 +215,7 @@ const INFO = {
       title: "gnix_fruits",
       description:
         "Guia interativo de frutas desenvolvido em Flutter com informações nutricionais, receitas e benefícios à saúde.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_fruits",
       linkImage:
@@ -226,7 +226,7 @@ const INFO = {
       title: "gnix_pinch",
       description:
         "Jogo interativo de gesture touch em Flutter que utiliza detecção de pinch e gestos avançados para gameplay imersivo.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_pinch",
       linkImage:
@@ -237,7 +237,7 @@ const INFO = {
       title: "gnix_grocery_list",
       description:
         "Aplicativo de lista de compras com sincronização em tempo real, categorização de produtos e controle de gastos.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_grocery_list",
       linkImage:
@@ -248,7 +248,7 @@ const INFO = {
       title: "gnix_pet",
       description:
         "Aplicativo de cuidados com animais de estimação em Flutter, permitindo agendar consultas, medicações e rastrear saúde.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_pet",
       linkImage:
@@ -259,7 +259,7 @@ const INFO = {
       title: "gnix_hike",
       description:
         "Aplicativo de trilhas e caminhadas desenvolvido em Flutter com rastreamento de localização, mapas e logs de atividades.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_hike",
       linkImage:
@@ -270,7 +270,7 @@ const INFO = {
       title: "gnix_async_image",
       description:
         "Biblioteca Flutter de otimização e carregamento assíncrono de imagens com cache inteligente e tratamento de erros.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_async_image",
       linkImage:
@@ -281,7 +281,7 @@ const INFO = {
       title: "gnix_restart",
       description:
         "Ferramenta de reinicialização de aplicativo em Flutter com sistema de cache e recuperação de estado.",
-      logo: "./mobile/Swift 1.png",
+      logo: "/mobile/swift.webp",
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/gnix_restart",
       linkImage:
@@ -463,13 +463,13 @@ const INFO = {
       institution: "UFC Campus Quixadá",
       title: "Graduação em Ciência da Computação",
       duration: "Fev 2017 - Dez 2022",
-      logo: "https://www.quixada.ufc.br/wp-content/uploads/2017/10/logo.png",
+      logo: "/logos/ufc-quixada.webp",
     },
     {
       institution: "EEEP Capelão Frei Orlando",
       title: "Técnico em Informática",
       duration: "Jan 2014 - Dez 2016",
-      logo: "https://tse3.mm.bing.net/th/id/OIP.jh1jrJNAo76vYpVTTU3vhwHaIz?rs=1&pid=ImgDetMain&o=7&rm=3",
+      logo: "/logos/governo-do-ceara.webp",
     },
   ],
   works: [
@@ -477,37 +477,37 @@ const INFO = {
       company: "Insight Data Science Lab",
       title: "Desenvolvedor Mobile Pleno",
       duration: "Mar 2023 - Dez 2025",
-      logo: "https://media.licdn.com/dms/image/v2/C4E0BAQHRenzZYaNO7A/company-logo_100_100/company-logo_100_100/0/1636132936592/insight_data_science_lab_logo?e=1770249600&v=beta&t=NqEAp6PhspyTb-IhRXDUqWTdA0FAB0Hf8MQnd11TuAk",
+      logo: "/logos/insight-data-science-lab.webp",
     },
     {
       company: "NEX2ME",
       title: "Desenvolvedor Full Stack",
       duration: "Set 2022 - Dez 2022",
-      logo: "https://media.licdn.com/dms/image/v2/C560BAQGV0tUDA713ag/company-logo_100_100/company-logo_100_100/0/1631389427373?e=1770249600&v=beta&t=HJCRWBpsLWvotCya7gDEAU0EcSMfHuzJcSCbEKJ5ddw",
+      logo: "/logos/nex2me.webp",
     },
     {
       company: "Secretaria de Segurança Pública",
       title: "Desenvolvedor Back-end",
       duration: "Mar 2022 - Nov 2022",
-      logo: "https://media.licdn.com/dms/image/v2/C510BAQGltjGSEeo4Tw/company-logo_100_100/company-logo_100_100/0/1631322299333?e=1770249600&v=beta&t=EnBrbkIRL6j3U7WNWBrNv0S-xbwZv6hEbrA_yKuIHiw",
+      logo: "/logos/governo-do-ceara.webp",
     },
     {
       company: "UFC Campus Quixadá",
       title: "Desenvolvedor Flutter",
       duration: "Mar 2022 - Jul 2022",
-      logo: "https://www.quixada.ufc.br/wp-content/uploads/2017/10/logo.png",
+      logo: "/logos/ufc-quixada.webp",
     },
     {
       company: "Universidade Federal do Ceará",
       title: "Bolsista PID",
       duration: "Ago 2020 - Jan 2022",
-      logo: "https://www.quixada.ufc.br/wp-content/uploads/2017/10/logo.png",
+      logo: "/logos/ufc-quixada.webp",
     },
     {
       company: "IFCE Campus Canindé",
       title: "Suporte Técnico",
       duration: "Jul 2016 - Jan 2017",
-      logo: "https://tse4.mm.bing.net/th/id/OIP.vnyuhQ0fki0gSwNv-QaDjgHaGW?rs=1&pid=ImgDetMain&o=7&rm=3",
+      logo: "/logos/ifce.webp",
     },
   ],
   playstore: [
@@ -515,7 +515,7 @@ const INFO = {
       title: "Acordaí",
       description:
         "Despertador inteligente e minimalista projetado especificamente para dispositivos Wear OS, garantindo que você nunca perca seus compromissos diretamente do seu pulso.",
-      logo: "https://play-lh.googleusercontent.com/cK59-DYZTxhJ_cVRgP9mPpgTpDsuNo-5NljvEKYA6dSnPRJkLrnXqWP8Xohoy0XYKE4C=w480-h960-rw", // Placeholder or direct link if I can find it, using a generic app icon style
+      logo: "/playstore/acordai.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=davi.android.alarmapp",
       metrics: "Wear OS | +100 Downloads",
@@ -524,7 +524,7 @@ const INFO = {
       title: "WatchCode Kotlin",
       description:
         "Watchface temática de programação desenvolvida em Kotlin para Wear OS. O design perfeito para desenvolvedores que querem exibir sua paixão no pulso.",
-      logo: "https://play-lh.googleusercontent.com/yZ5zOatdIdH7Ts2RAiM-6Vb0_SrSvzcOFruUtvaZIgODJ5APtulch-NxxcuzqjjyGA=w480-h960-rw",
+      logo: "/playstore/watchcode-kotlin.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.watchfacecodekotlin",
       metrics: "Paid App | Kotlin | Wear OS",
@@ -533,7 +533,7 @@ const INFO = {
       title: "Blaze Bird",
       description:
         "Um jogo arcade desafiador e viciante onde você controla um pássaro em um ambiente dinâmico. Teste seus reflexos!",
-      logo: "https://play-lh.googleusercontent.com/zyyq_X6HmzKUIMbUbNvORjSVVqtzrmpwKmEXufX-kWT3N-OGEYP1ETzyAK9l3DEHBQ=w480-h960-rw",
+      logo: "/playstore/blaze-bird.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.blazebird",
       metrics: "Arcade Game",
@@ -542,7 +542,7 @@ const INFO = {
       title: "WatchCode",
       description:
         "A versão clássica do WatchCode. Uma watchface elegante com estética de código para amantes de tecnologia.",
-      logo: "https://play-lh.googleusercontent.com/RZw8iIxmBKJzXhdXs5scDKvwz1zI4qhTrNz8bN6tLz69CgzfO8RzNDicQLixQRgk2H8K=w480-h960-rw",
+      logo: "/playstore/watchcode.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.watchfacecode",
       metrics: "Wear OS",
@@ -551,7 +551,7 @@ const INFO = {
       title: "Face Detector - DF MLKIT",
       description:
         "Aplicação demonstrativa do poder do Google ML Kit, detectando faces com precisão e velocidade em tempo real.",
-      logo: "https://play-lh.googleusercontent.com/cTtrgsPzuMm-qRJ-i1QZBtABuYo04uZmTEvs08yM6Y-7TEU1jr6AVHTwJ_xDWV5fRxw=w480-h960-rw",
+      logo: "/facedetector/icon.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.face_detect_scan",
       metrics: "AI/ML | Google ML Kit",
@@ -561,7 +561,7 @@ const INFO = {
       title: "Text Detector MLKIT",
       description:
         "Extraia texto de imagens em tempo real com facilidade usando esta ferramenta baseada no Google ML Kit.",
-      logo: "https://play-lh.googleusercontent.com/HO6cva4kclaRwz60mhogAtOOGx-ApcJSLuVP0FbKOYyWUyGMvR5JyKBXNxohTrHwoll5=w480-h960-rw",
+      logo: "/playstore/text-detector.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.text_detector_google_ml_kit",
       metrics: "OCR | Google ML Kit",
@@ -570,7 +570,7 @@ const INFO = {
       title: "Scanner MLKIT",
       description:
         "Crie PDFS a partir de imagens em tempo real com facilidade usando esta ferramenta baseada no Google ML Kit.",
-      logo: "https://play-lh.googleusercontent.com/4ORy_kUdWucFUUdI70qQufsy3wuH81Olfmx04PRYQY6xPx2kjiZ8jkKk9qnuer-lNw5VdehAK8-P9eQdSRIUyA=w240-h480-rw",
+      logo: "/scannermlkit/icon.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.scannermlkit",
       metrics: "OCR | Google ML Kit",
@@ -580,7 +580,7 @@ const INFO = {
       title: "Screenshot Gnix",
       description:
         "Aplicativo multiplataforma de edição e exportação de screenshots desenvolvido com Kotlin Multiplatform e Compose Multiplatform. Disponível para Android, iOS e Desktop.",
-      logo: "./screenshotgnix/icon.png",
+      logo: "/screenshotgnix/icon.webp",
       linkText: "Ver no GitHub",
       link: "https://github.com/davigomesflorencio/screenshot_kmp_gnix",
       metrics: "KMP | Compose Multiplatform",
