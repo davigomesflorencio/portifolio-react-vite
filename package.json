@@ -13,7 +13,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check": "node scripts/check-build.mjs",
+    "check:render": "node scripts/check-build.mjs --render"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

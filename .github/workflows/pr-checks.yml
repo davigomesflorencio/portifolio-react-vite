@@ -1,0 +1,42 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Um novo push no mesmo PR cancela a execução anterior
+concurrency:
+  group: pr-checks-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-check:
+    name: Build e checagens
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      # tsc -b + vite build
+      - name: Build for production
+        run: npm run build
+
+      # Arquivos do build, SEO do index.html, tamanho do JS, rotas x sitemap x llms.txt,
+      # imagens locais e renderização de cada rota no Chrome headless
+      - name: Check build
+        run: npm run check:render
