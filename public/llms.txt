@@ -1,0 +1,25 @@
+# Davi Gomes Florencio — Desenvolvedor Mobile Android e Flutter
+
+> Desenvolvedor mobile especializado em Android, Kotlin, Jetpack Compose, Flutter e Wear OS, com experiência em Spring Boot, Docker e pesquisa em IA pela Samsung.
+
+Portfólio pessoal de Davi Gomes Florencio, graduado em Ciência da Computação pela Universidade Federal do Ceará (UFC Quixadá). O site reúne experiência profissional, formação acadêmica, projetos open source e aplicativos publicados na Google Play. Conteúdo disponível em português e inglês.
+
+## Pages
+
+- [Davi Gomes Florencio](https://davigomesflorencio.com.br/): página inicial com resumo profissional, tecnologias, experiências e formação acadêmica
+- [Sobre](https://davigomesflorencio.com.br/about): trajetória, formação na UFC Quixadá e áreas de atuação (Android, wearables, back-end e dados)
+- [Projetos](https://davigomesflorencio.com.br/projects): principais projetos open source no GitHub (Android, Wear OS, Kotlin Multiplatform, Flutter e IA)
+- [Apps na Google Play](https://davigomesflorencio.com.br/playstore): aplicativos publicados na Google Play Store, com foco em Wear OS, ML Kit e ferramentas de IA
+- [Contato](https://davigomesflorencio.com.br/contact): formas de contato e formulário
+
+## Apps
+
+- [Screenshot Gnix](https://davigomesflorencio.com.br/screenshot): app multiplataforma para editar e exportar screenshots, feito com Kotlin Multiplatform e Compose Multiplatform
+- [Scanner MLKIT](https://davigomesflorencio.com.br/scanner-mlkit): app Android para digitalizar documentos e exportar em PDF com o Google ML Kit Document Scanner
+- [Face Detector DF MLKit](https://davigomesflorencio.com.br/facedetector-mlkit): app Android de detecção facial em tempo real com Google ML Kit, processado no próprio dispositivo
+
+## Optional
+
+- [GitHub](https://github.com/davigomesflorencio): repositórios e código-fonte
+- [LinkedIn](https://www.linkedin.com/in/davi-g-883b7a12a/): perfil profissional
+- [Currículo (PDF)](https://davigomesflorencio.com.br/cv-davigomesflorencio.pdf): currículo completo
