@@ -25,4 +25,10 @@ i18n
     },
   });
 
+const setHtmlLang = (lng: string) => {
+  document.documentElement.lang = lng.startsWith("en") ? "en" : "pt-BR";
+};
+setHtmlLang(i18n.language ?? "pt");
+i18n.on("languageChanged", setHtmlLang);
+
 export default i18n;

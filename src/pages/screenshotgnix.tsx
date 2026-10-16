@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import useSeo from "../components/common/useSeo";
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/fotter";
 import Particles from "../components/common/particles";
@@ -306,6 +308,8 @@ const features = [
 ];
 
 const ScreenshotGnix = () => {
+  const { t } = useTranslation();
+  useSeo(t("seo.screenshot.title"), t("seo.screenshot.description"), "/screenshot");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -348,7 +352,7 @@ const ScreenshotGnix = () => {
               />
             </div>
 
-            <div className="title w-full!">
+            <h1 className="title w-full!">
               <GradientText
                 colors={["#258176", "#CF85CD", "#00d3f2"]}
                 animationSpeed={8}
@@ -357,7 +361,7 @@ const ScreenshotGnix = () => {
               >
                 Screenshot Gnix
               </GradientText>
-            </div>
+            </h1>
 
             <p className="subtitle max-w-2xl">
               Aplicativo multiplataforma de edição e exportação de screenshots,

@@ -11,7 +11,10 @@
         "description": "Desenvolvedor com experiência comprovada em projetos de alto impacto — desde aplicações móveis com patente universitária até sistemas para a SSPDS do Ceará e pesquisa em IA pela Samsung.\n\nEspecializado em desenvolvimento mobile nativo para Android e wearables (Kotlin, Jetpack Compose, Flutter/Dart), com atuação em arquiteturas robustas como MVVM, injeção de dependências, pirâmide de testes completa e pipelines de CI/CD automatizados.\n\nNo back-end, experiência com microsserviços de alta complexidade em Java Spring Boot e WebFlux, orquestração com Docker e Kubernetes, mensageria com Apache Kafka e APIs REST para plataformas.\nAtuação também em health tech com integração ao Samsung Health SDK, processamento de sinais fisiológicos com NeuroKit e monitoramento com Firebase — contribuindo ativamente no projeto Samsung AI4Wellness, com app estável em uso contínuo pelo Insight Data Science Lab.\n\nPerfil orientado a qualidade, com entregas que incluem 80%+ de cobertura de testes, publicação de artigos científicos, patente universitária (UFC) e sistemas em produção real.",
         "experiences": "Experiências profissionais",
         "academic": "Formação acadêmica",
-        "technologies": "Tecnologias"
+        "technologies": "Tecnologias",
+        "seeProjects": "Ver projetos",
+        "seeApps": "Ver apps na Play Store",
+        "aboutMe": "Sobre mim"
     },
     "about": {
         "title": "Sou Davi Gomes Florencio. Moro no Brasil, onde projeto o futuro.",
@@ -36,5 +39,43 @@
     },
     "footer": {
         "rights": "Todos os direitos reservados."
+    },
+    "seo": {
+        "home": {
+            "title": "Davi Gomes Florencio | Desenvolvedor Mobile Android e Flutter",
+            "description": "Desenvolvedor mobile especializado em Android, Kotlin, Jetpack Compose, Flutter e Wear OS, com experiência em Spring Boot, Docker e pesquisa em IA pela Samsung."
+        },
+        "about": {
+            "title": "Sobre Davi Gomes Florencio | Kotlin, Compose e Wear OS",
+            "description": "Conheça a trajetória de Davi Gomes Florencio: Ciência da Computação na UFC Quixadá, desenvolvimento Android, wearables, back-end em Spring Boot e análise de dados."
+        },
+        "projects": {
+            "title": "Projetos Android, Flutter e Wear OS | Davi Gomes Florencio",
+            "description": "Principais projetos open source de Davi Gomes Florencio no GitHub: apps Android, Wear OS, Kotlin Multiplatform, Flutter e soluções com IA."
+        },
+        "playstore": {
+            "title": "Apps publicados na Google Play | Davi Gomes Florencio",
+            "description": "Aplicativos de Davi Gomes Florencio publicados na Google Play Store, com foco em Wear OS, ML Kit e ferramentas de IA."
+        },
+        "contact": {
+            "title": "Contato | Davi Gomes Florencio",
+            "description": "Entre em contato com Davi Gomes Florencio, desenvolvedor mobile Android e Flutter, por e-mail ou pelo formulário de contato."
+        },
+        "screenshot": {
+            "title": "Screenshot Gnix | App de edição de screenshots em KMP",
+            "description": "Screenshot Gnix: app multiplataforma para editar e exportar screenshots, feito com Kotlin Multiplatform e Compose Multiplatform."
+        },
+        "scanner": {
+            "title": "Scanner MLKIT | Digitalizador de documentos para Android",
+            "description": "Scanner MLKIT: app Android para digitalizar, aprimorar e exportar documentos em PDF usando o Google ML Kit Document Scanner."
+        },
+        "facedetector": {
+            "title": "Face Detector DF MLKit | Detecção facial no Android",
+            "description": "Face Detector DF MLKit: app Android de detecção facial em tempo real com Google ML Kit, processando tudo no próprio dispositivo."
+        },
+        "notfound": {
+            "title": "Página não encontrada | Davi Gomes Florencio",
+            "description": "A página que você procura não foi encontrada."
+        }
     }
 }

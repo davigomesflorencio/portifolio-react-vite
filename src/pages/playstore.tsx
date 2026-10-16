@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import useSeo from "../components/common/useSeo";
 import NavBar from "../components/common/navBar";
 import AllApps from "../components/playstore/allApps";
 import Footer from "../components/common/fotter";
@@ -9,6 +10,7 @@ import Particles from "../components/common/particles";
 
 const PlayStore = () => {
   const { t } = useTranslation();
+  useSeo(t("seo.playstore.title"), t("seo.playstore.description"), "/playstore");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -46,7 +48,7 @@ const PlayStore = () => {
                   className="text-accent text-3xl"
                 />
               </div>
-              <div className="title w-full!">{t("playstore.title")}</div>
+              <h1 className="title w-full!">{t("playstore.title")}</h1>
               <div className="subtitle w-full!">
                 {t("playstore.description")}
               </div>

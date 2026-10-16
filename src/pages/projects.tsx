@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import useSeo from "../components/common/useSeo";
 import NavBar from "../components/common/navBar";
 import AllProjects from "../components/projects/allProjects";
 import Footer from "../components/common/fotter";
@@ -9,6 +10,7 @@ import ClickSpark from "../components/common/clickSpark";
 
 const Projects = () => {
   const { t } = useTranslation();
+  useSeo(t("seo.projects.title"), t("seo.projects.description"), "/projects");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -100,9 +102,9 @@ const Projects = () => {
             duration={400}
           >
             <div className="flex flex-col h-full m-0 pt-[120px]">
-              <div className="title !w-full text-center">
+              <h1 className="title !w-full text-center">
                 {t("projects.title")}
-              </div>
+              </h1>
 
               <div className="pt-10">
                 <AllProjects />
