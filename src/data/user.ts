@@ -131,7 +131,7 @@ const INFO = {
       linkText: "View Project",
       link: "https://github.com/davigomesflorencio/face_detector_mlkit",
       linkImage:
-        "https://play-lh.googleusercontent.com/v44IsgEIXueExWA7eNiBTvS2FzGKYmDbX2I5tL-xEV5ZN7XGAZG2htGT7uwsB-BNEYM=w2560-h1440-rw",
+        "/projects/face-detector-mlkit.webp",
     },
 
     {
@@ -515,7 +515,7 @@ const INFO = {
       title: "Acordaí",
       description:
         "Despertador inteligente e minimalista projetado especificamente para dispositivos Wear OS, garantindo que você nunca perca seus compromissos diretamente do seu pulso.",
-      logo: "https://play-lh.googleusercontent.com/cK59-DYZTxhJ_cVRgP9mPpgTpDsuNo-5NljvEKYA6dSnPRJkLrnXqWP8Xohoy0XYKE4C=w480-h960-rw", // Placeholder or direct link if I can find it, using a generic app icon style
+      logo: "/playstore/acordai.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=davi.android.alarmapp",
       metrics: "Wear OS | +100 Downloads",
@@ -524,7 +524,7 @@ const INFO = {
       title: "WatchCode Kotlin",
       description:
         "Watchface temática de programação desenvolvida em Kotlin para Wear OS. O design perfeito para desenvolvedores que querem exibir sua paixão no pulso.",
-      logo: "https://play-lh.googleusercontent.com/yZ5zOatdIdH7Ts2RAiM-6Vb0_SrSvzcOFruUtvaZIgODJ5APtulch-NxxcuzqjjyGA=w480-h960-rw",
+      logo: "/playstore/watchcode-kotlin.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.watchfacecodekotlin",
       metrics: "Paid App | Kotlin | Wear OS",
@@ -533,7 +533,7 @@ const INFO = {
       title: "Blaze Bird",
       description:
         "Um jogo arcade desafiador e viciante onde você controla um pássaro em um ambiente dinâmico. Teste seus reflexos!",
-      logo: "https://play-lh.googleusercontent.com/zyyq_X6HmzKUIMbUbNvORjSVVqtzrmpwKmEXufX-kWT3N-OGEYP1ETzyAK9l3DEHBQ=w480-h960-rw",
+      logo: "/playstore/blaze-bird.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.blazebird",
       metrics: "Arcade Game",
@@ -542,7 +542,7 @@ const INFO = {
       title: "WatchCode",
       description:
         "A versão clássica do WatchCode. Uma watchface elegante com estética de código para amantes de tecnologia.",
-      logo: "https://play-lh.googleusercontent.com/RZw8iIxmBKJzXhdXs5scDKvwz1zI4qhTrNz8bN6tLz69CgzfO8RzNDicQLixQRgk2H8K=w480-h960-rw",
+      logo: "/playstore/watchcode.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.watchfacecode",
       metrics: "Wear OS",
@@ -551,7 +551,7 @@ const INFO = {
       title: "Face Detector - DF MLKIT",
       description:
         "Aplicação demonstrativa do poder do Google ML Kit, detectando faces com precisão e velocidade em tempo real.",
-      logo: "https://play-lh.googleusercontent.com/cTtrgsPzuMm-qRJ-i1QZBtABuYo04uZmTEvs08yM6Y-7TEU1jr6AVHTwJ_xDWV5fRxw=w480-h960-rw",
+      logo: "/facedetector/icon.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.face_detect_scan",
       metrics: "AI/ML | Google ML Kit",
@@ -561,7 +561,7 @@ const INFO = {
       title: "Text Detector MLKIT",
       description:
         "Extraia texto de imagens em tempo real com facilidade usando esta ferramenta baseada no Google ML Kit.",
-      logo: "https://play-lh.googleusercontent.com/HO6cva4kclaRwz60mhogAtOOGx-ApcJSLuVP0FbKOYyWUyGMvR5JyKBXNxohTrHwoll5=w480-h960-rw",
+      logo: "/playstore/text-detector.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.text_detector_google_ml_kit",
       metrics: "OCR | Google ML Kit",
@@ -570,7 +570,7 @@ const INFO = {
       title: "Scanner MLKIT",
       description:
         "Crie PDFS a partir de imagens em tempo real com facilidade usando esta ferramenta baseada no Google ML Kit.",
-      logo: "https://play-lh.googleusercontent.com/4ORy_kUdWucFUUdI70qQufsy3wuH81Olfmx04PRYQY6xPx2kjiZ8jkKk9qnuer-lNw5VdehAK8-P9eQdSRIUyA=w240-h480-rw",
+      logo: "/scannermlkit/icon.webp",
       linkText: "Ver na Play Store",
       link: "https://play.google.com/store/apps/details?id=com.davi.dev.scannermlkit",
       metrics: "OCR | Google ML Kit",
