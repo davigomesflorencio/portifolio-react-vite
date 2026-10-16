@@ -1,16 +1,18 @@
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { TRACKING_ID } from "./data/tracking";
 import ReactGA from "react-ga4";
 import { Route, Routes } from "react-router-dom";
-import Homepage from "./pages/homepage";
-import About from "./pages/about";
-import Projects from "./pages/projects";
-import Notfound from "./pages/404";
-import Contact from "./pages/contact";
-import PlayStore from "./pages/playstore";
-import ScreenshotGnix from "./pages/screenshotgnix";
-import ScannerMLKit from "./pages/scannermlkit";
-import FaceDetector from "./pages/facedetector";
+
+// Cada página vira um chunk separado: a home não baixa Leaflet, EmailJS etc.
+const Homepage = lazy(() => import("./pages/homepage"));
+const About = lazy(() => import("./pages/about"));
+const Projects = lazy(() => import("./pages/projects"));
+const Notfound = lazy(() => import("./pages/404"));
+const Contact = lazy(() => import("./pages/contact"));
+const PlayStore = lazy(() => import("./pages/playstore"));
+const ScreenshotGnix = lazy(() => import("./pages/screenshotgnix"));
+const ScannerMLKit = lazy(() => import("./pages/scannermlkit"));
+const FaceDetector = lazy(() => import("./pages/facedetector"));
 
 export default function App() {
   useEffect(() => {
@@ -19,17 +21,19 @@ export default function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/playstore" element={<PlayStore />} />
-        <Route path="/screenshot" element={<ScreenshotGnix />} />
-        <Route path="/scanner-mlkit" element={<ScannerMLKit />} />
-        <Route path="/facedetector-mlkit" element={<FaceDetector />} />
-        <Route path="*" element={<Notfound />} />
-      </Routes>
+      <Suspense fallback={<div className="min-h-screen" />}>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/playstore" element={<PlayStore />} />
+          <Route path="/screenshot" element={<ScreenshotGnix />} />
+          <Route path="/scanner-mlkit" element={<ScannerMLKit />} />
+          <Route path="/facedetector-mlkit" element={<FaceDetector />} />
+          <Route path="*" element={<Notfound />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }
