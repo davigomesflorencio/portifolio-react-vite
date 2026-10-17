@@ -1,6 +1,4 @@
-import type { SpringOptions } from "motion/react";
-import { useRef, useState } from "react";
-import { motion, useMotionValue, useSpring } from "motion/react";
+import { useRef } from "react";
 
 interface TiltedCardProps {
   imageSrc: React.ComponentProps<"img">["src"];
@@ -18,12 +16,8 @@ interface TiltedCardProps {
   displayOverlayContent?: boolean;
 }
 
-const springValues: SpringOptions = {
-  damping: 30,
-  stiffness: 100,
-  mass: 2,
-};
-
+// Sem biblioteca de animação: o mouse atualiza o transform direto no elemento
+// (sem re-render do React) e as transições CSS suavizam o movimento.
 export default function TiltedCard({
   imageSrc,
   altText = "Tilted card image",
@@ -40,19 +34,15 @@ export default function TiltedCard({
   displayOverlayContent = false,
 }: TiltedCardProps) {
   const ref = useRef<HTMLElement>(null);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const rotateX = useSpring(useMotionValue(0), springValues);
-  const rotateY = useSpring(useMotionValue(0), springValues);
-  const scale = useSpring(1, springValues);
-  const opacity = useSpring(0);
-  const rotateFigcaption = useSpring(0, {
-    stiffness: 350,
-    damping: 30,
-    mass: 1,
-  });
+  const cardRef = useRef<HTMLDivElement>(null);
+  const captionRef = useRef<HTMLElement>(null);
+  const lastY = useRef(0);
 
-  const [lastY, setLastY] = useState(0);
+  function setCard(rotateX: number, rotateY: number, scale: number) {
+    if (cardRef.current) {
+      cardRef.current.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`;
+    }
+  }
 
   function handleMouse(e: React.MouseEvent<HTMLElement>) {
     if (!ref.current) return;
@@ -63,29 +53,22 @@ export default function TiltedCard({
 
     const rotationX = (offsetY / (rect.height / 2)) * -rotateAmplitude;
     const rotationY = (offsetX / (rect.width / 2)) * rotateAmplitude;
+    setCard(rotationX, rotationY, scaleOnHover);
 
-    rotateX.set(rotationX);
-    rotateY.set(rotationY);
-
-    x.set(e.clientX - rect.left);
-    y.set(e.clientY - rect.top);
-
-    const velocityY = offsetY - lastY;
-    rotateFigcaption.set(-velocityY * 0.6);
-    setLastY(offsetY);
+    if (captionRef.current) {
+      const velocityY = offsetY - lastY.current;
+      captionRef.current.style.transform = `translate(${e.clientX - rect.left}px, ${e.clientY - rect.top}px) rotate(${-velocityY * 0.6}deg)`;
+    }
+    lastY.current = offsetY;
   }
 
   function handleMouseEnter() {
-    scale.set(scaleOnHover);
-    opacity.set(1);
+    if (captionRef.current) captionRef.current.style.opacity = "1";
   }
 
   function handleMouseLeave() {
-    opacity.set(0);
-    scale.set(1);
-    rotateX.set(0);
-    rotateY.set(0);
-    rotateFigcaption.set(0);
+    setCard(0, 0, 1);
+    if (captionRef.current) captionRef.current.style.opacity = "0";
   }
 
   return (
@@ -106,17 +89,15 @@ export default function TiltedCard({
         </div>
       )}
 
-      <motion.div
-        className="relative [transform-style:preserve-3d]"
+      <div
+        ref={cardRef}
+        className="relative [transform-style:preserve-3d] transition-transform duration-500 ease-out motion-reduce:transition-none"
         style={{
           width: imageWidth,
           height: imageHeight,
-          rotateX,
-          rotateY,
-          scale,
         }}
       >
-        <motion.img
+        <img
           src={imageSrc}
           alt={altText}
           fetchPriority="high"
@@ -128,24 +109,19 @@ export default function TiltedCard({
         />
 
         {displayOverlayContent && overlayContent && (
-          <motion.div className="absolute top-0 left-0 z-[2] will-change-transform [transform:translateZ(30px)]">
+          <div className="absolute top-0 left-0 z-[2] will-change-transform [transform:translateZ(30px)]">
             {overlayContent}
-          </motion.div>
+          </div>
         )}
-      </motion.div>
+      </div>
 
       {showTooltip && (
-        <motion.figcaption
-          className="pointer-events-none absolute left-0 top-0 rounded-[4px] bg-white px-[10px] py-[4px] text-[10px] text-[#2d2d2d] opacity-0 z-[3] hidden sm:block"
-          style={{
-            x,
-            y,
-            opacity,
-            rotate: rotateFigcaption,
-          }}
+        <figcaption
+          ref={captionRef}
+          className="pointer-events-none absolute left-0 top-0 rounded-[4px] bg-white px-[10px] py-[4px] text-[10px] text-[#2d2d2d] opacity-0 z-[3] hidden sm:block transition-[opacity,transform] duration-200 ease-out"
         >
           {captionText}
-        </motion.figcaption>
+        </figcaption>
       )}
     </figure>
   );

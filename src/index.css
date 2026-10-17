@@ -160,3 +160,28 @@
     }
   }
 }
+
+/* GradientText: o gradiente é 3x mais largo que o texto e desliza de um lado para o outro */
+@keyframes gradient-text-x {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-text-y {
+  from {
+    background-position: 50% 0%;
+  }
+  to {
+    background-position: 50% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text-animated {
+    animation: none !important;
+  }
+}
