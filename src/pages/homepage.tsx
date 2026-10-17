@@ -24,161 +24,218 @@ import LogoLoop, { type LogoItem } from "../components/common/logoLoop";
 import TiltedCard from "../components/common/tiltedCard";
 import useSeo from "../components/common/useSeo";
 
+// Logos dos carrosséis. Ficam fora do componente para não serem recriados a cada render
+// (o LogoLoop é memoizado e refaz suas medições quando a lista muda).
+// Todos foram gerados em 240x240 por scripts/optimize-images.mjs.
+const LOGO_SIZE = 240;
+
+const imageLogosMobile = [
+  {
+    src: "/mobile/android.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Android",
+    href: "https://android.com",
+  },
+  {
+    src: "/mobile/apple.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Apple",
+    href: "https://www.apple.com/",
+  },
+  {
+    src: "/mobile/dart.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Dart",
+    href: "https://dart.dev",
+  },
+  {
+    src: "/mobile/firebase.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Firebase",
+    href: "https://firebase.google.com/",
+  },
+  {
+    src: "/mobile/flutter.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Flutter",
+    href: "https://flutter.dev/",
+  },
+  {
+    src: "/mobile/idea.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Idea",
+    href: "https://www.jetbrains.com/idea/",
+  },
+  {
+    src: "/mobile/java.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Java",
+    href: "https://www.java.com/",
+  },
+  {
+    src: "/mobile/kotlin.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Kotlin",
+    href: "https://kotlinlang.org/",
+  },
+  {
+    src: "/mobile/ktor.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Ktor",
+    href: "https://ktor.io/",
+  },
+  {
+    src: "/mobile/swift.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Swift",
+    href: "https://developer.apple.com/swift/",
+  },
+] as LogoItem[];
+
+const imageLogosFront = [
+  {
+    src: "/front/angular.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Angular",
+    href: "https://angular.io/",
+  },
+  {
+    src: "/front/css.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "CSS",
+    href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    src: "/front/html.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "HTML",
+    href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    src: "/front/javascript.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "JavaScript",
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    src: "/front/react.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "React",
+    href: "https://reactjs.org/",
+  },
+  {
+    src: "/front/typescript.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "TypeScript",
+    href: "https://www.typescriptlang.org/",
+  },
+  {
+    src: "/front/tailwindcss.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "TailwindCSS",
+    href: "https://tailwindcss.com/",
+  },
+  {
+    src: "/front/vite.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Vite",
+    href: "https://vitejs.dev/",
+  },
+] as LogoItem[];
+
+const stackBackEnd = [
+  {
+    src: "/back/docker.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Docker",
+    href: "https://www.docker.com/",
+  },
+  {
+    src: "/back/fastapi.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "FastAPI",
+    href: "https://fastapi.tiangolo.com/",
+  },
+  {
+    src: "/back/jenkins.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Jenkins",
+    href: "https://jenkins.io/",
+  },
+  {
+    src: "/back/nodejs.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "NodeJS",
+    href: "https://nodejs.org/",
+  },
+  {
+    src: "/back/postman.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Postman",
+    href: "https://www.postman.com/",
+  },
+  {
+    src: "/back/python.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Python",
+    href: "https://www.python.org/",
+  },
+  {
+    src: "/back/rabbitmq.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "RabbitMQ",
+    href: "https://www.rabbitmq.com/",
+  },
+  {
+    src: "/back/sentry.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Sentry",
+    href: "https://sentry.io/",
+  },
+  {
+    src: "/back/spring.webp",
+    width: LOGO_SIZE,
+    height: LOGO_SIZE,
+    alt: "Spring",
+    href: "https://spring.io/",
+  },
+] as LogoItem[];
+
 const Homepage = () => {
   const { t } = useTranslation();
   useSeo(t("seo.home.title"), t("seo.home.description"), "/");
-  const [logoSize, setLogoSize] = useState(80);
-  const [oldLogoSize, setOldLogoSize] = useState(80);
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const theme = localStorage.getItem("theme");
     return theme === "dark";
   });
 
   const fadeOutColor = isDarkMode ? "#1a1a1a" : "#ffffff";
-
-  const imageLogosMobile = [
-    {
-      src: "/mobile/android.webp",
-      alt: "Android",
-      href: "https://android.com",
-    },
-    {
-      src: "/mobile/apple.webp",
-      alt: "Apple",
-      href: "https://www.apple.com/",
-    },
-    {
-      src: "/mobile/dart.webp",
-      alt: "Dart",
-      href: "https://dart.dev",
-    },
-    {
-      src: "/mobile/firebase.webp",
-      alt: "Firebase",
-      href: "https://firebase.google.com/",
-    },
-    {
-      src: "/mobile/flutter.webp",
-      alt: "Flutter",
-      href: "https://flutter.dev/",
-    },
-    {
-      src: "/mobile/idea.webp",
-      alt: "Idea",
-      href: "https://www.jetbrains.com/idea/",
-    },
-    {
-      src: "/mobile/java.webp",
-      alt: "Java",
-      href: "https://www.java.com/",
-    },
-    {
-      src: "/mobile/kotlin.webp",
-      alt: "Kotlin",
-      href: "https://kotlinlang.org/",
-    },
-    {
-      src: "/mobile/ktor.webp",
-      alt: "Ktor",
-      href: "https://ktor.io/",
-    },
-    {
-      src: "/mobile/swift.webp",
-      alt: "Swift",
-      href: "https://developer.apple.com/swift/",
-    },
-  ] as LogoItem[];
-
-  const imageLogosFront = [
-    {
-      src: "/front/angular.webp",
-      alt: "Angular",
-      href: "https://angular.io/",
-    },
-    {
-      src: "/front/css.webp",
-      alt: "CSS",
-      href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-    },
-    {
-      src: "/front/html.webp",
-      alt: "HTML",
-      href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    },
-    {
-      src: "/front/javascript.webp",
-      alt: "JavaScript",
-      href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    },
-    {
-      src: "/front/react.webp",
-      alt: "React",
-      href: "https://reactjs.org/",
-    },
-    {
-      src: "/front/typescript.webp",
-      alt: "TypeScript",
-      href: "https://www.typescriptlang.org/",
-    },
-    {
-      src: "/front/tailwindcss.webp",
-      alt: "TailwindCSS",
-      href: "https://tailwindcss.com/",
-    },
-    {
-      src: "/front/vite.webp",
-      alt: "Vite",
-      href: "https://vitejs.dev/",
-    },
-  ] as LogoItem[];
-
-  const stackBackEnd = [
-    {
-      src: "/back/docker.webp",
-      alt: "Docker",
-      href: "https://www.docker.com/",
-    },
-    {
-      src: "/back/fastapi.webp",
-      alt: "FastAPI",
-      href: "https://fastapi.tiangolo.com/",
-    },
-    {
-      src: "/back/jenkins.webp",
-      alt: "Jenkins",
-      href: "https://jenkins.io/",
-    },
-    {
-      src: "/back/nodejs.webp",
-      alt: "NodeJS",
-      href: "https://nodejs.org/",
-    },
-    {
-      src: "/back/postman.webp",
-      alt: "Postman",
-      href: "https://www.postman.com/",
-    },
-    {
-      src: "/back/python.webp",
-      alt: "Python",
-      href: "https://www.python.org/",
-    },
-    {
-      src: "/back/rabbitmq.webp",
-      alt: "RabbitMQ",
-      href: "https://www.rabbitmq.com/",
-    },
-    {
-      src: "/back/sentry.webp",
-      alt: "Sentry",
-      href: "https://sentry.io/",
-    },
-    {
-      src: "/back/spring.webp",
-      alt: "Spring",
-      href: "https://spring.io/",
-    },
-  ] as LogoItem[];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -208,26 +265,6 @@ const Homepage = () => {
       window.removeEventListener("storage", handleThemeChange);
     };
   }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scroll = Math.round(window.pageYOffset);
-
-      const newLogoSize = 80 - (scroll * 4) / 10;
-
-      if (newLogoSize < oldLogoSize) {
-        if (newLogoSize > 40) {
-          setLogoSize(newLogoSize);
-          setOldLogoSize(newLogoSize);
-        }
-      } else {
-        setLogoSize(newLogoSize);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [logoSize, oldLogoSize]);
 
   return (
     <React.Fragment>
