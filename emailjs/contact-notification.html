@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+  <title>Nova mensagem do portfólio</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .bg-page { background-color: #1a1a1a !important; }
+      .bg-card { background-color: #27272a !important; border-color: #3f3f46 !important; }
+      .bg-field { background-color: #1f1f22 !important; border-color: #3f3f46 !important; }
+      .text-primary { color: #f4f4f5 !important; }
+      .text-secondary { color: #acacb4 !important; }
+      .divider { border-color: #3f3f46 !important; }
+      .btn-dark { background-color: #3f3f46 !important; }
+      .accent-left { border-left-color: #00d3f2 !important; }
+    }
+    @media only screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 20px !important; padding-right: 20px !important; }
+    }
+  </style>
+</head>
+<body class="bg-page" style="margin:0;padding:0;background-color:#f4f4f5;">
+  <!-- Texto de pré-visualização mostrado na caixa de entrada -->
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;">
+    {{user_name}} enviou uma mensagem pelo portfólio.
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-page" style="background-color:#f4f4f5;">
+    <tr>
+      <td align="center" style="padding:32px 12px;">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" class="container" style="width:600px;max-width:600px;">
+
+          <!-- Faixa com o gradiente do site (#258176 → #CF85CD → #00d3f2) -->
+          <tr>
+            <td style="height:6px;line-height:6px;font-size:0;border-radius:16px 16px 0 0;background-color:#00d3f2;background-image:linear-gradient(90deg,#258176,#CF85CD,#00d3f2);">&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td class="bg-card px" style="background-color:#ffffff;border:1px solid #e4e4e7;border-top:0;border-radius:0 0 16px 16px;padding:36px 40px;font-family:'Cal Sans',Arial,Helvetica,sans-serif;">
+
+              <!-- Cabeçalho -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="56" valign="middle">
+                    <img src="https://davigomesflorencio.com.br/home.jpg" width="48" height="48" alt="Davi Gomes Florencio" style="display:block;width:48px;height:48px;border-radius:12px;object-fit:cover;border:0;" />
+                  </td>
+                  <td valign="middle" style="padding-left:12px;">
+                    <div class="text-secondary" style="font-size:13px;line-height:18px;color:#65656d;">davigomesflorencio.com.br</div>
+                    <div class="text-primary" style="font-size:22px;line-height:28px;font-weight:bold;color:#27272a;">Nova mensagem do portfólio</div>
+                  </td>
+                </tr>
+              </table>
+
+              <p class="text-secondary" style="margin:24px 0 20px;font-size:15px;line-height:22px;color:#65656d;">
+                Alguém entrou em contato pelo formulário do site.
+              </p>
+
+              <!-- Dados de quem enviou -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-field" style="background-color:#fafafa;border:1px solid #e4e4e7;border-radius:12px;">
+                <tr>
+                  <td class="divider" style="padding:16px 20px;border-bottom:1px solid #e4e4e7;">
+                    <div class="text-secondary" style="font-size:12px;line-height:16px;color:#65656d;text-transform:uppercase;letter-spacing:0.5px;">Nome</div>
+                    <div class="text-primary" style="font-size:16px;line-height:22px;font-weight:bold;color:#27272a;">{{user_name}}</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:16px 20px;">
+                    <div class="text-secondary" style="font-size:12px;line-height:16px;color:#65656d;text-transform:uppercase;letter-spacing:0.5px;">E-mail</div>
+                    <a href="mailto:{{user_email}}" style="font-size:16px;line-height:22px;font-weight:bold;color:#00a5bd;text-decoration:none;">{{user_email}}</a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Mensagem -->
+              <div class="text-secondary" style="margin:24px 0 8px;font-size:12px;line-height:16px;color:#65656d;text-transform:uppercase;letter-spacing:0.5px;">Mensagem</div>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="bg-field text-primary accent-left" style="background-color:#fafafa;border:1px solid #e4e4e7;border-left:4px solid #00d3f2;border-radius:12px;padding:18px 20px;font-size:15px;line-height:24px;color:#27272a;white-space:pre-wrap;word-break:break-word;">{{message}}</td>
+                </tr>
+              </table>
+
+              <!-- Botão no estilo do "Download CV" do site -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:28px;">
+                <tr>
+                  <td style="border-radius:8px;background-color:#00d3f2;box-shadow:0 4px 12px rgba(0,211,242,0.35);">
+                    <a href="mailto:{{user_email}}?subject=Re:%20Contato%20pelo%20portf%C3%B3lio" style="display:inline-block;padding:12px 24px;font-family:'Cal Sans',Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#000000;text-decoration:none;border-radius:8px;">Responder {{user_name}}</a>
+                  </td>
+                </tr>
+              </table>
+
+              <p class="text-secondary" style="margin:20px 0 0;font-size:13px;line-height:20px;color:#acacb4;">
+                Dica: responder este e-mail também funciona, porque o Reply-To é o endereço de quem enviou.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Rodapé -->
+          <tr>
+            <td align="center" style="padding:20px 12px 0;font-family:'Cal Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:#acacb4;">
+              Enviado pelo formulário de contato de
+              <a href="https://davigomesflorencio.com.br" style="color:#65656d;text-decoration:underline;">davigomesflorencio.com.br</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+  <title>Recebi sua mensagem</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .bg-page { background-color: #1a1a1a !important; }
+      .bg-card { background-color: #27272a !important; border-color: #3f3f46 !important; }
+      .bg-field { background-color: #1f1f22 !important; border-color: #3f3f46 !important; }
+      .text-primary { color: #f4f4f5 !important; }
+      .text-secondary { color: #acacb4 !important; }
+      .divider { border-color: #3f3f46 !important; }
+      .btn-dark { background-color: #3f3f46 !important; }
+      .accent-left { border-left-color: #00d3f2 !important; }
+    }
+    @media only screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 20px !important; padding-right: 20px !important; }
+      .stack { display: block !important; width: 100% !important; padding: 0 0 10px !important; }
+    }
+  </style>
+</head>
+<body class="bg-page" style="margin:0;padding:0;background-color:#f4f4f5;">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;">
+    Obrigado pelo contato, {{user_name}}! Vou responder em breve.
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-page" style="background-color:#f4f4f5;">
+    <tr>
+      <td align="center" style="padding:32px 12px;">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" class="container" style="width:600px;max-width:600px;">
+
+          <!-- Faixa com o gradiente do site (#258176 → #CF85CD → #00d3f2) -->
+          <tr>
+            <td style="height:6px;line-height:6px;font-size:0;border-radius:16px 16px 0 0;background-color:#00d3f2;background-image:linear-gradient(90deg,#258176,#CF85CD,#00d3f2);">&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td class="bg-card px" style="background-color:#ffffff;border:1px solid #e4e4e7;border-top:0;border-radius:0 0 16px 16px;padding:40px;font-family:'Cal Sans',Arial,Helvetica,sans-serif;">
+
+              <!-- Foto e nome, como no topo da home -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center">
+                    <img src="https://davigomesflorencio.com.br/home.jpg" width="96" height="96" alt="Davi Gomes Florencio" style="display:block;width:96px;height:96px;border-radius:15px;object-fit:cover;border:0;" />
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-top:16px;">
+                    <div class="text-primary" style="font-size:24px;line-height:30px;font-weight:bold;color:#27272a;">Olá, {{user_name}}!</div>
+                    <div style="font-size:15px;line-height:22px;font-weight:bold;color:#00a5bd;padding-top:4px;">Recebi sua mensagem</div>
+                  </td>
+                </tr>
+              </table>
+
+              <p class="text-secondary" style="margin:28px 0 0;font-size:15px;line-height:24px;color:#65656d;">
+                Obrigado por entrar em contato pelo meu portfólio. Vou ler com atenção e responder assim que possível.
+              </p>
+              <p class="text-secondary" style="margin:12px 0 0;font-size:15px;line-height:24px;color:#65656d;">
+                Para sua referência, esta é a mensagem que você enviou:
+              </p>
+
+              <!-- Cópia da mensagem -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">
+                <tr>
+                  <td class="bg-field text-primary accent-left" style="background-color:#fafafa;border:1px solid #e4e4e7;border-left:4px solid #00d3f2;border-radius:12px;padding:18px 20px;font-size:15px;line-height:24px;color:#27272a;white-space:pre-wrap;word-break:break-word;">{{message}}</td>
+                </tr>
+              </table>
+
+              <p class="text-secondary" style="margin:28px 0 16px;font-size:15px;line-height:24px;color:#65656d;">
+                Enquanto isso, conheça alguns dos meus trabalhos:
+              </p>
+
+              <!-- Botões para as páginas do site -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="stack" width="50%" style="padding-right:6px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td align="center" style="border-radius:8px;background-color:#00d3f2;box-shadow:0 4px 12px rgba(0,211,242,0.35);">
+                          <a href="https://davigomesflorencio.com.br/projects" style="display:block;padding:12px 16px;font-family:'Cal Sans',Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#000000;text-decoration:none;border-radius:8px;">Ver projetos</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="stack" width="50%" style="padding-left:6px;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td align="center" class="btn-dark" style="border-radius:8px;background-color:#27272a;">
+                          <a href="https://davigomesflorencio.com.br/playstore" style="display:block;padding:12px 16px;font-family:'Cal Sans',Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#ffffff;text-decoration:none;border-radius:8px;">Apps na Google Play</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Assinatura e redes -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="divider" style="margin-top:32px;border-top:1px solid #e4e4e7;">
+                <tr>
+                  <td style="padding-top:20px;">
+                    <div class="text-primary" style="font-size:16px;line-height:22px;font-weight:bold;color:#27272a;">Davi Gomes Florencio</div>
+                    <div class="text-secondary" style="font-size:14px;line-height:20px;color:#65656d;">Desenvolvedor Mobile · Android | Kotlin | Flutter</div>
+                    <div style="padding-top:10px;font-size:14px;line-height:20px;">
+                      <a href="https://github.com/davigomesflorencio" style="color:#00a5bd;text-decoration:none;font-weight:bold;">GitHub</a>
+                      <span style="color:#acacb4;">&nbsp;·&nbsp;</span>
+                      <a href="https://www.linkedin.com/in/davi-g-883b7a12a/" style="color:#00a5bd;text-decoration:none;font-weight:bold;">LinkedIn</a>
+                      <span style="color:#acacb4;">&nbsp;·&nbsp;</span>
+                      <a href="https://davigomesflorencio.com.br" style="color:#00a5bd;text-decoration:none;font-weight:bold;">Site</a>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Rodapé -->
+          <tr>
+            <td align="center" style="padding:20px 12px 0;font-family:'Cal Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:#acacb4;">
+              Você recebeu este e-mail porque enviou uma mensagem pelo formulário de
+              <a href="https://davigomesflorencio.com.br/contact" style="color:#65656d;text-decoration:underline;">davigomesflorencio.com.br</a>.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
