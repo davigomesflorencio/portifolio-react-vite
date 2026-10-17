@@ -2,6 +2,8 @@ import { useRef } from "react";
 
 interface TiltedCardProps {
   imageSrc: React.ComponentProps<"img">["src"];
+  imageSrcSet?: string;
+  imageSizes?: string;
   altText?: string;
   captionText?: string;
   containerHeight?: React.CSSProperties["height"];
@@ -20,6 +22,8 @@ interface TiltedCardProps {
 // (sem re-render do React) e as transições CSS suavizam o movimento.
 export default function TiltedCard({
   imageSrc,
+  imageSrcSet,
+  imageSizes,
   altText = "Tilted card image",
   captionText = "",
   containerHeight = "300px",
@@ -99,6 +103,8 @@ export default function TiltedCard({
       >
         <img
           src={imageSrc}
+          srcSet={imageSrcSet}
+          sizes={imageSizes}
           alt={altText}
           fetchPriority="high"
           className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"

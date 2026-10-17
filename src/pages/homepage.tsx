@@ -26,10 +26,25 @@ import useSeo from "../components/common/useSeo";
 
 // Logos dos carrosséis. Ficam fora do componente para não serem recriados a cada render
 // (o LogoLoop é memoizado e refaz suas medições quando a lista muda).
-// Todos foram gerados em 240x240 por scripts/optimize-images.mjs.
+// Todos foram gerados em 240x240 por scripts/optimize-images.mjs, que também cria as
+// variantes -80 e -160. São exibidos com 80 px CSS (logoHeight), e o srcset deixa o
+// navegador escolher a menor variante que atende a densidade da tela.
 const LOGO_SIZE = 240;
+const LOGO_DISPLAY_SIZE = 80;
 
-const imageLogosMobile = [
+type ImageLogo = Extract<LogoItem, { src: string }>;
+
+const withSrcSet = (logos: ImageLogo[]): ImageLogo[] =>
+  logos.map((logo) => ({
+    ...logo,
+    srcSet: [80, 160]
+      .map((w) => `${logo.src.replace(/\.webp$/, `-${w}.webp`)} ${w}w`)
+      .concat(`${logo.src} ${LOGO_SIZE}w`)
+      .join(", "),
+    sizes: `${LOGO_DISPLAY_SIZE}px`,
+  }));
+
+const imageLogosMobile = withSrcSet([
   {
     src: "/mobile/android.webp",
     width: LOGO_SIZE,
@@ -100,9 +115,9 @@ const imageLogosMobile = [
     alt: "Swift",
     href: "https://developer.apple.com/swift/",
   },
-] as LogoItem[];
+]);
 
-const imageLogosFront = [
+const imageLogosFront = withSrcSet([
   {
     src: "/front/angular.webp",
     width: LOGO_SIZE,
@@ -159,9 +174,9 @@ const imageLogosFront = [
     alt: "Vite",
     href: "https://vitejs.dev/",
   },
-] as LogoItem[];
+]);
 
-const stackBackEnd = [
+const stackBackEnd = withSrcSet([
   {
     src: "/back/docker.webp",
     width: LOGO_SIZE,
@@ -225,7 +240,7 @@ const stackBackEnd = [
     alt: "Spring",
     href: "https://spring.io/",
   },
-] as LogoItem[];
+]);
 
 const Homepage = () => {
   const { t } = useTranslation();
@@ -301,6 +316,8 @@ const Homepage = () => {
               >
                 <TiltedCard
                   imageSrc="/home.webp"
+                  imageSrcSet="/home-300.webp 300w, /home-450.webp 450w, /home.webp 590w"
+                  imageSizes="300px"
                   altText="Davi Gomes Florencio"
                   captionText="Davi Gomes Florencio"
                   containerHeight="300px"
