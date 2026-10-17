@@ -81,19 +81,23 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
     [easing]
   );
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+  // O loop de desenho só roda enquanto há faíscas na tela. Antes ele rodava sempre,
+  // limpando o canvas (do tamanho da página) a cada frame, o que forçava o navegador
+  // a recompor a página inteira continuamente.
+  const animationIdRef = useRef<number | null>(null);
 
-    let animationId: number;
-
-    const draw = (timestamp: number) => {
+  const startLoop = () => {
+    const step = (timestamp: number) => {
+      const canvas = canvasRef.current;
+      const ctx = canvas?.getContext("2d");
+      if (!canvas || !ctx) {
+        animationIdRef.current = null;
+        return;
+      }
       if (!startTimeRef.current) {
         startTimeRef.current = timestamp;
       }
-      ctx?.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       sparksRef.current = sparksRef.current.filter((spark: Spark) => {
         const elapsed = timestamp - spark.startTime;
@@ -122,15 +126,18 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
         return true;
       });
 
-      animationId = requestAnimationFrame(draw);
+      // Sem faíscas: o canvas já está limpo e o loop para até o próximo clique
+      animationIdRef.current =
+        sparksRef.current.length > 0 ? requestAnimationFrame(step) : null;
     };
+    animationIdRef.current = requestAnimationFrame(step);
+  };
 
-    animationId = requestAnimationFrame(draw);
-
+  useEffect(() => {
     return () => {
-      cancelAnimationFrame(animationId);
+      if (animationIdRef.current !== null) cancelAnimationFrame(animationIdRef.current);
     };
-  }, [sparkColor, sparkSize, sparkRadius, sparkCount, duration, easeFunc, extraScale]);
+  }, []);
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>): void => {
     const canvas = canvasRef.current;
@@ -148,6 +155,7 @@ const ClickSpark: React.FC<ClickSparkProps> = ({
     }));
 
     sparksRef.current.push(...newSparks);
+    if (animationIdRef.current === null) startLoop();
   };
 
   return (

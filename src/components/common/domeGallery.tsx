@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useCallback } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useCallback } from "react";
 import { useGesture } from "@use-gesture/react";
 
 export type ImageItem = string | { src: string; alt?: string };
@@ -221,13 +221,14 @@ export default function DomeGallery({
 
   const lockedRadiusRef = useRef<number | null>(null);
 
-  useEffect(() => {
+  // useLayoutEffect: o raio e a posição do domo precisam estar definidos antes da
+  // primeira pintura; senão as imagens aparecem fora do lugar e "pulam" (CLS)
+  useLayoutEffect(() => {
     const root = rootRef.current;
     if (!root) return;
-    const ro = new ResizeObserver((entries) => {
-      const cr = entries[0].contentRect;
-      const w = Math.max(1, cr.width),
-        h = Math.max(1, cr.height);
+    const layout = (width: number, height: number) => {
+      const w = Math.max(1, width),
+        h = Math.max(1, height);
       const minDim = Math.min(w, h),
         maxDim = Math.max(w, h),
         aspect = w / h;
@@ -295,6 +296,14 @@ export default function DomeGallery({
           enlargedOverlay.style.height = `${frameR.height}px`;
         }
       }
+    };
+
+    const rect = root.getBoundingClientRect();
+    layout(rect.width, rect.height);
+
+    const ro = new ResizeObserver((entries) => {
+      const cr = entries[0].contentRect;
+      layout(cr.width, cr.height);
     });
     ro.observe(root);
     return () => ro.disconnect();
@@ -312,7 +321,7 @@ export default function DomeGallery({
     openedImageHeight,
   ]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     applyTransform(rotationRef.current.x, rotationRef.current.y);
   }, []);
 
