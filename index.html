@@ -55,7 +55,9 @@
 <body>
   <div id="root">
     <!-- Conteúdo para crawlers sem JavaScript; o React substitui ao montar -->
-    <main style="max-width:1200px;margin:150px auto 0;padding:0 16px;font-family:system-ui,sans-serif;text-align:center">
+    <!-- padding, não margin: a margem do topo colapsava com a do body e o deslocava
+         150px; quando o React trocava este conteúdo, o body "pulava" (CLS) -->
+    <main style="max-width:1200px;margin:0 auto;padding:150px 16px 0;font-family:system-ui,sans-serif;text-align:center">
       <h1>Davi Gomes Florencio — Desenvolvedor Mobile Android, Kotlin e Flutter</h1>
       <p>
         Desenvolvedor especializado em Android, Wear OS, Jetpack Compose, Kotlin Multiplatform e Flutter,
