@@ -3,7 +3,6 @@ const INFO = {
     title: "Davi Gomes Florencio",
     name: "Davi Gomes Florencio",
     email: "davigomesflorencio@gmail.com",
-    logo: "../logo.png",
     cv: "/cv-davigomesflorencio.pdf",
   },
 
