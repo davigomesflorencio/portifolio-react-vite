@@ -1,15 +1,4 @@
-import {
-  useState,
-  useCallback,
-  useEffect,
-  useRef
-} from "react";
-import {
-  motion,
-  useMotionValue,
-  useAnimationFrame,
-  useTransform,
-} from "motion/react";
+import type { CSSProperties } from "react";
 
 interface GradientTextProps {
   children: string;
@@ -22,6 +11,8 @@ interface GradientTextProps {
   yoyo?: boolean;
 }
 
+// Animação só com CSS (keyframes em index.css): não precisa de biblioteca nem de
+// requestAnimationFrame, e o navegador pode rodá-la fora da thread principal.
 export default function GradientText({
   children,
   className = "",
@@ -32,79 +23,16 @@ export default function GradientText({
   pauseOnHover = false,
   yoyo = true,
 }: GradientTextProps) {
-  const [isPaused, setIsPaused] = useState(false);
-  const progress = useMotionValue(0);
-  const elapsedRef = useRef(0);
-  const lastTimeRef = useRef<number | null>(null);
-
-  const animationDuration = animationSpeed * 1000;
-
-  useAnimationFrame((time) => {
-    if (isPaused) {
-      lastTimeRef.current = null;
-      return;
-    }
-
-    if (lastTimeRef.current === null) {
-      lastTimeRef.current = time;
-      return;
-    }
-
-    const deltaTime = time - lastTimeRef.current;
-    lastTimeRef.current = time;
-    elapsedRef.current += deltaTime;
-
-    if (yoyo) {
-      const fullCycle = animationDuration * 2;
-      const cycleTime = elapsedRef.current % fullCycle;
-
-      if (cycleTime < animationDuration) {
-        progress.set((cycleTime / animationDuration) * 100);
-      } else {
-        progress.set(
-          100 - ((cycleTime - animationDuration) / animationDuration) * 100,
-        );
-      }
-    } else {
-      // Continuously increase position for seamless looping
-      progress.set((elapsedRef.current / animationDuration) * 100);
-    }
-  });
-
-  useEffect(() => {
-    elapsedRef.current = 0;
-    progress.set(0);
-  }, [animationSpeed, yoyo]);
-
-  const backgroundPosition = useTransform(progress, (p) => {
-    if (direction === "horizontal") {
-      return `${p}% 50%`;
-    } else if (direction === "vertical") {
-      return `50% ${p}%`;
-    } else {
-      // For diagonal, move only horizontally to avoid interference patterns
-      return `${p}% 50%`;
-    }
-  });
-
-  const handleMouseEnter = useCallback(() => {
-    if (pauseOnHover) setIsPaused(true);
-  }, [pauseOnHover]);
-
-  const handleMouseLeave = useCallback(() => {
-    if (pauseOnHover) setIsPaused(false);
-  }, [pauseOnHover]);
-
   const gradientAngle =
     direction === "horizontal"
       ? "to right"
       : direction === "vertical"
         ? "to bottom"
         : "to bottom right";
-  // Duplicate first color at the end for seamless looping
+  // Repete a primeira cor no fim para o loop não ter emenda
   const gradientColors = [...colors, colors[0]].join(", ");
 
-  const gradientStyle = {
+  const gradientStyle: CSSProperties = {
     backgroundImage: `linear-gradient(${gradientAngle}, ${gradientColors})`,
     backgroundSize:
       direction === "horizontal"
@@ -113,18 +41,22 @@ export default function GradientText({
           ? "100% 300%"
           : "300% 300%",
     backgroundRepeat: "repeat",
+    // Diagonal anima só na horizontal, como antes, para evitar padrões de interferência
+    animation: `${direction === "vertical" ? "gradient-text-y" : "gradient-text-x"} ${animationSpeed}s linear infinite ${yoyo ? "alternate" : "normal"}`,
   };
 
+  const pauseClass = pauseOnHover
+    ? "group-hover/gradient:[animation-play-state:paused]"
+    : "";
+
   return (
-    <motion.div
-      className={`relative mx-auto flex max-w-fit flex-row items-center justify-center rounded-[1.25rem] font-medium backdrop-blur transition-shadow duration-500 overflow-hidden cursor-pointer ${showBorder ? "py-1 px-2" : ""} ${className}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+    <div
+      className={`group/gradient relative mx-auto flex max-w-fit flex-row items-center justify-center rounded-[1.25rem] font-medium backdrop-blur transition-shadow duration-500 overflow-hidden cursor-pointer ${showBorder ? "py-1 px-2" : ""} ${className}`}
     >
       {showBorder && (
-        <motion.div
-          className="absolute inset-0 z-0 pointer-events-none rounded-[1.25rem]"
-          style={{ ...gradientStyle, backgroundPosition }}
+        <div
+          className={`gradient-text-animated absolute inset-0 z-0 pointer-events-none rounded-[1.25rem] ${pauseClass}`}
+          style={gradientStyle}
         >
           <div
             className="absolute bg-black rounded-[1.25rem] z-[-1]"
@@ -136,18 +68,14 @@ export default function GradientText({
               transform: "translate(-50%, -50%)",
             }}
           />
-        </motion.div>
+        </div>
       )}
-      <motion.div
-        className="inline-block relative z-2 text-transparent bg-clip-text"
-        style={{
-          ...gradientStyle,
-          backgroundPosition,
-          WebkitBackgroundClip: "text",
-        }}
+      <div
+        className={`gradient-text-animated inline-block relative z-2 text-transparent bg-clip-text ${pauseClass}`}
+        style={{ ...gradientStyle, WebkitBackgroundClip: "text" }}
       >
         {children}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }

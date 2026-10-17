@@ -1,9 +1,5 @@
 import * as React from "react";
 import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface FadeContentProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
@@ -21,6 +17,19 @@ interface FadeContentProps extends React.HTMLAttributes<HTMLDivElement> {
   onDisappearanceComplete?: () => void;
 }
 
+// Nomes de easing do GSAP usados antes -> equivalentes em CSS
+const EASES: Record<string, string> = {
+  "power2.out": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+  "power2.in": "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+  "power2.inOut": "cubic-bezier(0.645, 0.045, 0.355, 1)",
+};
+const toCssEase = (ease: string) => EASES[ease] ?? ease;
+
+// Aceita milissegundos (> 10) ou segundos, como a versão com GSAP
+const toMs = (val: number) => (val > 10 ? val : val * 1000);
+
+// Fade-in com transição CSS quando o elemento entra na tela (IntersectionObserver).
+// Antes usava GSAP + ScrollTrigger (~110 KB), que ainda atrasava a foto do topo da home.
 const FadeContent: React.FC<FadeContentProps> = ({
   children,
   container,
@@ -45,59 +54,60 @@ const FadeContent: React.FC<FadeContentProps> = ({
     const el = ref.current;
     if (!el) return;
 
-    let scrollerTarget: Element | string | null =
-      container || document.getElementById("snap-main-container") || null;
+    const hiddenFilter = blur ? "blur(10px)" : "blur(0px)";
+    const timers: number[] = [];
 
-    if (typeof scrollerTarget === "string") {
-      scrollerTarget = document.querySelector(scrollerTarget);
+    const show = () => {
+      el.style.transition = `opacity ${toMs(duration)}ms ${toCssEase(ease)} ${toMs(delay)}ms, filter ${toMs(duration)}ms ${toCssEase(ease)} ${toMs(delay)}ms`;
+      el.style.opacity = "1";
+      el.style.filter = "blur(0px)";
+
+      timers.push(
+        window.setTimeout(() => {
+          onComplete?.();
+          if (disappearAfter > 0) {
+            timers.push(
+              window.setTimeout(() => {
+                el.style.transition = `opacity ${toMs(disappearDuration)}ms ${toCssEase(disappearEase)}, filter ${toMs(disappearDuration)}ms ${toCssEase(disappearEase)}`;
+                el.style.opacity = String(initialOpacity);
+                el.style.filter = hiddenFilter;
+                timers.push(
+                  window.setTimeout(() => onDisappearanceComplete?.(), toMs(disappearDuration)),
+                );
+              }, toMs(disappearAfter)),
+            );
+          }
+        }, toMs(delay) + toMs(duration)),
+      );
+    };
+
+    // Respeita quem pediu para reduzir animações
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.style.opacity = "1";
+      el.style.filter = "none";
+      onComplete?.();
+      return;
     }
 
-    const startPct = (1 - threshold) * 100;
-    const getSeconds = (val: number) => (val > 10 ? val / 1000 : val);
+    const root: Element | null =
+      typeof container === "string"
+        ? document.querySelector(container)
+        : container || document.getElementById("snap-main-container");
 
-    gsap.set(el, {
-      autoAlpha: initialOpacity,
-      filter: blur ? "blur(10px)" : "blur(0px)",
-      willChange: "opacity, filter, transform",
-    });
-
-    const tl = gsap.timeline({
-      paused: true,
-      delay: getSeconds(delay),
-      onComplete: () => {
-        if (onComplete) onComplete();
-        if (disappearAfter > 0) {
-          gsap.to(el, {
-            autoAlpha: initialOpacity,
-            filter: blur ? "blur(10px)" : "blur(0px)",
-            delay: getSeconds(disappearAfter),
-            duration: getSeconds(disappearDuration),
-            ease: disappearEase,
-            onComplete: () => onDisappearanceComplete?.(),
-          });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          observer.disconnect();
+          show();
         }
       },
-    });
-
-    tl.to(el, {
-      autoAlpha: 1,
-      filter: "blur(0px)",
-      duration: getSeconds(duration),
-      ease: ease,
-    });
-
-    const st = ScrollTrigger.create({
-      trigger: el,
-      scroller: scrollerTarget || window,
-      start: `top ${startPct}%`,
-      once: true,
-      onEnter: () => tl.play(),
-    });
+      { root, threshold },
+    );
+    observer.observe(el);
 
     return () => {
-      st.kill();
-      tl.kill();
-      gsap.killTweensOf(el);
+      observer.disconnect();
+      timers.forEach((t) => window.clearTimeout(t));
     };
   }, []);
 
@@ -105,7 +115,12 @@ const FadeContent: React.FC<FadeContentProps> = ({
     <div
       ref={ref}
       className={className}
-      style={{ visibility: "hidden", ...style }}
+      style={{
+        opacity: initialOpacity,
+        filter: blur ? "blur(10px)" : "blur(0px)",
+        willChange: "opacity, filter",
+        ...style,
+      }}
       {...props}
     >
       {children}
