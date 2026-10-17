@@ -109,6 +109,8 @@ const FadeContent: React.FC<FadeContentProps> = ({
       observer.disconnect();
       timers.forEach((t) => window.clearTimeout(t));
     };
+    // A animação roda uma única vez, com as props do primeiro render (como a versão com GSAP)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
