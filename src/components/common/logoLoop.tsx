@@ -134,6 +134,7 @@ const useAnimationLoop = (
   isHovered: boolean,
   hoverSpeed: number | undefined,
   isVertical: boolean,
+  isInView: boolean,
 ) => {
   const rafRef = useRef<number | null>(null);
   const lastTimestampRef = useRef<number | null>(null);
@@ -163,6 +164,13 @@ const useAnimationLoop = (
       track.style.transform = isVertical
         ? "translate3d(0, 0, 0)"
         : "translate3d(0, 0, 0)";
+      return () => {
+        lastTimestampRef.current = null;
+      };
+    }
+
+    // Fora da tela não anima: o loop roda JavaScript a cada frame
+    if (!isInView) {
       return () => {
         lastTimestampRef.current = null;
       };
@@ -207,7 +215,7 @@ const useAnimationLoop = (
       }
       lastTimestampRef.current = null;
     };
-  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, trackRef]);
+  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, trackRef, isInView]);
 };
 
 export const LogoLoop = React.memo<LogoLoopProps>(
@@ -238,6 +246,17 @@ export const LogoLoop = React.memo<LogoLoopProps>(
       ANIMATION_CONFIG.MIN_COPIES,
     );
     const [isHovered, setIsHovered] = useState<boolean>(false);
+    const [isInView, setIsInView] = useState<boolean>(false);
+
+    useEffect(() => {
+      const container = containerRef.current;
+      if (!container) return;
+      const observer = new IntersectionObserver(([entry]) =>
+        setIsInView(entry.isIntersecting),
+      );
+      observer.observe(container);
+      return () => observer.disconnect();
+    }, []);
 
     const effectiveHoverSpeed = useMemo(() => {
       if (hoverSpeed !== undefined) return hoverSpeed;
@@ -314,6 +333,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
       isHovered,
       effectiveHoverSpeed,
       isVertical,
+      isInView,
     );
 
     const cssVariables = useMemo(
