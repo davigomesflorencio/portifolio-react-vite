@@ -3,7 +3,7 @@ const ComplementStack = () => {
     <div className="flex flex-row gap-4 w-full mt-10">
       <div className="flex items-center">
         <div className="text-[20px] mr-4">
-          <img src="/ic_spring.webp" alt="Logo do Spring Boot" loading="lazy" decoding="async" className="w-[130px]" />
+          <img src="/ic_spring.webp" alt="Logo do Spring Boot" width={512} height={512} loading="lazy" decoding="async" className="w-[130px]" />
         </div>
       </div>
 
@@ -23,7 +23,7 @@ const ComplementStack = () => {
 
       <div className="flex items-center justify-center">
         <div className="text-[20px] mr-4">
-          <img src="/ic_docker.webp" alt="Logo do Docker" loading="lazy" decoding="async" className="w-[150px]" />
+          <img src="/ic_docker.webp" alt="Logo do Docker" width={512} height={512} loading="lazy" decoding="async" className="w-[150px]" />
         </div>
       </div>
       <div className="flex items-center justify-center">
