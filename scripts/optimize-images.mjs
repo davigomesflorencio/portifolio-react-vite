@@ -79,7 +79,34 @@ for await (const file of walk(PUBLIC_DIR)) {
   if (!KEEP && !KEEP_ORIGINAL.has(rel) && path.resolve(out) !== path.resolve(file)) await unlink(file);
 }
 
+// Variantes menores dos logos dos carrosséis (exibidos com 80 px CSS), usadas no srcset:
+// "kotlin.webp" (240 px) ganha "kotlin-80.webp" e "kotlin-160.webp".
+const RESPONSIVE_DIRS = ["mobile", "front", "back"];
+const RESPONSIVE_WIDTHS = [80, 160];
+let variants = 0;
+
+for (const dir of RESPONSIVE_DIRS) {
+  for (const entry of await readdir(path.join(PUBLIC_DIR, dir))) {
+    if (!entry.endsWith(".webp") || /-\d+\.webp$/.test(entry)) continue;
+    const source = path.join(PUBLIC_DIR, dir, entry);
+    const input = await readFile(source);
+    for (const width of RESPONSIVE_WIDTHS) {
+      const out = path.join(PUBLIC_DIR, dir, entry.replace(/\.webp$/, `-${width}.webp`));
+      await sharp(input).resize({ width, withoutEnlargement: true }).webp({ quality: 90, alphaQuality: 100, effort: 6 }).toFile(out);
+      variants++;
+    }
+  }
+}
+
+// Foto do topo da home (exibida com 300 px CSS): variantes para o srcset do TiltedCard
+for (const width of [300, 450]) {
+  const input = await readFile(path.join(PUBLIC_DIR, "home.webp"));
+  await sharp(input).resize({ width, withoutEnlargement: true }).webp({ quality: 82, effort: 6 }).toFile(path.join(PUBLIC_DIR, `home-${width}.webp`));
+  variants++;
+}
+
 console.log(JSON.stringify(manifest, null, 2));
+console.error(`${variants} variantes responsivas geradas (logos em ${RESPONSIVE_DIRS.join(", ")} e foto da home)`);
 console.error(
   `\n${Object.keys(manifest).length} imagens: ${(before / 1048576).toFixed(2)} MB -> ${(after / 1048576).toFixed(2)} MB`,
 );
