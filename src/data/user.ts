@@ -473,6 +473,12 @@ const INFO = {
   ],
   works: [
     {
+      company: "FCamara",
+      title: "Desenvolvedor Mobile Android",
+      duration: "Mar 2026 - Atual",
+      logo: "/logos/fcamara.webp",
+    },
+    {
       company: "Insight Data Science Lab",
       title: "Desenvolvedor Mobile Pleno",
       duration: "Mar 2023 - Dez 2025",
