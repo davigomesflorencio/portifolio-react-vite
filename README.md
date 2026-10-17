@@ -1,72 +1,140 @@
 <div>
-<img src="assets/1.gif" alt="drawing" style="width:auto;"/>
-
-<div>
+<img src="assets/1.gif" alt="Demonstração do portfólio" style="width:auto;"/>
+</div>
 
 # Portfólio - Davi Gomes Florencio
 
-Este é o projeto de portfólio pessoal de **Davi Gomes Florencio**, desenvolvido para destacar competências em desenvolvimento móvel (Android/iOS, Kotlin, Flutter) e full-stack. O projeto foi construído com foco em performance, design moderno e facilidade de manutenção.
+Portfólio pessoal de **Davi Gomes Florencio**, desenvolvedor mobile (Android, Kotlin, Jetpack Compose, Flutter e Wear OS). Reúne experiência profissional, formação, projetos open source e os apps publicados na Google Play.
+
+🌐 **https://davigomesflorencio.com.br**
 
 ---
 
-## 🚀 Tecnologias e Ferramentas
+## 🚀 Tecnologias
 
-O projeto utiliza o que há de mais moderno no ecossistema de desenvolvimento web:
+- **[React 19](https://react.dev/)** + **[TypeScript](https://www.typescriptlang.org/)**
+- **[Vite 7](https://vitejs.dev/)**: dev server e build de produção
+- **[Tailwind CSS v4](https://tailwindcss.com/)**: configuração _CSS-first_ em `src/index.css`
+- **[React Router v6](https://reactrouter.com/)**: SPA com cada página carregada sob demanda (`React.lazy`)
+- **[i18next](https://www.i18next.com/)**: português e inglês, com detecção automática do idioma
+- **[Leaflet](https://leafletjs.com/)**: mapa da página Sobre
+- **[EmailJS](https://www.emailjs.com/)**: formulário de contato
+- **[OGL](https://github.com/oframe/ogl)**: fundo de partículas em WebGL
+- **[FontAwesome](https://fontawesome.com/)**: ícones
+- **[react-ga4](https://github.com/codler/react-ga4)**: Google Analytics 4, carregado só depois da primeira interação
 
-- **[React 19](https://react.dev/):** Biblioteca principal para construção da interface de usuário, aproveitando as melhorias de performance e gerenciamento de estado da última versão.
-- **[Vite 7](https://vitejs.dev/):** Ferramenta de build extremamente rápida que proporciona uma experiência de desenvolvimento ágil e builds de produção otimizados.
-- **[TypeScript](https://www.typescriptlang.org/):** Adição de tipagem estática ao JavaScript, garantindo maior robustez e segurança ao código.
-- **[Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4-alpha):** Framework CSS utilitário configurado com a nova abordagem _CSS-first_, proporcionando estilização rápida e responsiva sem arquivos de configuração complexos.
-- **[FontAwesome](https://fontawesome.com/):** Conjunto abrangente de ícones SVG para uma interface visualmente rica.
-- **[React Router Dom v6](https://reactrouter.com/):** Gerenciamento de rotas para uma navegação fluida em uma Single Page Application (SPA).
-
----
-
-## 🎨 Design e Estética
-
-- **Estilo Moderno:** Uso da fonte **Cal Sans** e uma paleta de cores harmoniosa para um visual premium e profissional.
-- **Dark Mode:** Suporte nativo a temas Light e Dark, com persistência no `localStorage` e transições suaves.
-- **Responsividade:** Layout totalmente adaptável para dispositivos móveis, tablets e desktops.
-- **Animações e Micro-interações:** Efeitos de hover e transições que tornam a navegação mais envolvente.
+As animações (fade, texto em gradiente, card inclinado) são feitas com CSS e eventos do navegador, sem bibliotecas de animação.
 
 ---
 
-## 📂 Arquitetura e Padrões
+## 📄 Páginas
 
-O projeto segue padrões de mercado para garantir escalabilidade:
-
-- **Component-Based Architecture:** Interface dividida em componentes pequenos, reutilizáveis e especializados (ex: `NavBar`, `Card`, `Footer`).
-- **Data-Driven Content:** Todas as informações do portfólio (experiências, projetos, dados pessoais) são gerenciadas em um arquivo centralizado (`src/data/user.ts`), facilitando atualizações.
-- **CSS-First Configuration:** Aproveita as novas capacidades do Tailwind v4 para gerenciar variáveis de tema e variantes diretamente no CSS global.
-
----
-
-## 🛠️ Bibliotecas Principais
-
-- `@fortawesome/react-fontawesome`: Integração de ícones.
-- `react-ga4`: Monitoramento de métricas via Google Analytics 4.
-- `vite-plugin-html`: Otimização do HTML e injeção de metadados.
+| Rota | Página |
+|---|---|
+| `/` | Home: apresentação, tecnologias, experiências e formação |
+| `/about` | Sobre: trajetória, mapa e stacks |
+| `/projects` | Projetos do GitHub |
+| `/playstore` | Apps publicados na Google Play |
+| `/screenshot` | Screenshot Gnix (app + política de privacidade) |
+| `/scanner-mlkit` | Scanner MLKIT (app + política de privacidade) |
+| `/facedetector-mlkit` | Face Detector DF MLKit (app + política de privacidade) |
+| `/contact` | Contato |
 
 ---
 
-## 🏃 Como Executar o Projeto
+## 🏃 Como executar
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone https://github.com/davigomesflorencio/portifolio-vite-react.git
-    ```
-2.  **Instale as dependências:**
-    ```bash
-    npm install
-    ```
-3.  **Inicie o servidor de desenvolvimento:**
-    ```bash
-    npm run dev
-    ```
-4.  **Crie o build de produção:**
-    ```bash
-    npm run build
-    ```
+Requisitos: **Node.js 20.19+** (ou 22.12+) e npm.
+
+```bash
+git clone https://github.com/davigomesflorencio/portifolio-react-vite.git
+cd portifolio-react-vite
+npm install
+npm run dev
+```
+
+### Variáveis de ambiente
+
+O formulário de contato usa o EmailJS. Crie um arquivo `.env` na raiz (ele já está no `.gitignore`):
+
+```env
+VITE_EMAILJS_SERVICE_ID=...
+VITE_EMAILJS_TEMPLATE_ID=...
+VITE_EMAILJS_PUBLIC_KEY=...
+```
+
+Sem essas variáveis o site funciona normalmente; só o envio do formulário falha.
+
+### Scripts
+
+| Comando | O que faz |
+|---|---|
+| `npm run dev` | Servidor de desenvolvimento |
+| `npm run build` | Checagem de tipos (`tsc -b`) + build de produção em `dist/` |
+| `npm run preview` | Serve o build de `dist/` localmente |
+| `npm run lint` | ESLint |
+| `npm run check` | Verifica o build (SEO, tamanho do JS, rotas, imagens). Rode depois do `build` |
+| `npm run check:render` | O mesmo, abrindo cada rota no Chrome headless |
+| `node scripts/optimize-images.mjs` | Converte PNG/JPG de `public/` para WebP e normaliza os nomes |
+
+---
+
+## 📂 Estrutura
+
+```
+├── .github/workflows/
+│   ├── pr-checks.yml           # build + checagens em cada PR
+│   └── deploy-vite-react.yml   # deploy no push para a main
+├── fonts/                      # Cal Sans (WOFF2)
+├── public/                     # imagens (WebP), robots.txt, sitemap.xml, llms.txt, currículo
+├── scripts/
+│   ├── check-build.mjs         # checagens do build (usado no CI)
+│   └── optimize-images.mjs     # conversão de imagens para WebP
+├── src/
+│   ├── components/             # about, common, contact, homepage, playstore, projects
+│   ├── data/user.ts            # todo o conteúdo: experiências, formação, projetos, apps
+│   ├── locales/{pt,en}/        # traduções, incluindo títulos e descrições de SEO
+│   ├── pages/                  # uma página por rota
+│   ├── App.tsx                 # rotas
+│   └── i18n.ts
+└── index.html                  # meta tags, JSON-LD e conteúdo inicial para crawlers
+```
+
+---
+
+## ✏️ Como atualizar o conteúdo
+
+- **Experiências, formação, projetos e apps:** edite `src/data/user.ts`.
+- **Textos da interface:** edite `src/locales/pt/translation.json` e `src/locales/en/translation.json`.
+- **Imagens:** sirva sempre de `public/`, nunca por link de outro site (links do LinkedIn expiram e o Google bloqueia hotlink da Play Store). Coloque o PNG/JPG em `public/` e rode `node scripts/optimize-images.mjs`.
+
+### Criando uma página nova
+
+1. Crie o componente em `src/pages/` e a rota em `src/App.tsx` com `lazy(() => import(...))`.
+2. Chame `useSeo(título, descrição, caminho)` e use **um único** `<h1>`.
+3. Adicione os textos de SEO na seção `seo` das traduções.
+4. Inclua a rota em `public/sitemap.xml` e em `public/llms.txt`. O CI falha se faltar.
+
+---
+
+## 🔍 SEO e performance
+
+- **SEO:** título, description e canonical por rota; Open Graph; dados estruturados (JSON-LD `Person`); `robots.txt`, `sitemap.xml` e [`llms.txt`](https://davigomesflorencio.com.br/llms.txt); conteúdo inicial com H1 e links no `index.html` para crawlers que não executam JavaScript.
+- **Performance:**
+  - code splitting por rota;
+  - imagens em WebP com `width`/`height` e lazy loading;
+  - fonte em WOFF2 com `font-display: swap`, preload e fallback com métricas ajustadas (evita troca de layout);
+  - Google Analytics carregado só após a primeira interação.
+
+> Ao mexer no conteúdo inicial do `index.html`, use `padding` (e não `margin`) no topo: a margem colapsa com a do `body` e causa troca de layout (CLS).
+
+---
+
+## ⚙️ CI/CD
+
+- **Em cada PR** (`pr-checks.yml`): `npm ci`, `npm run build` e `npm run check:render`. O check se chama **"Build e checagens"**.
+- **Branch `main` protegida:** merge só via PR com o check passando; force push e exclusão bloqueados.
+- **Deploy** (`deploy-vite-react.yml`): a cada push na `main`, o build é enviado por SSH para o servidor (Nginx em VPS) e o site é verificado.
 
 ---
 
@@ -74,6 +142,7 @@ O projeto segue padrões de mercado para garantir escalabilidade:
 
 **Davi Gomes Florencio**
 
+- [Site](https://davigomesflorencio.com.br)
 - [GitHub](https://github.com/davigomesflorencio)
 - [LinkedIn](https://www.linkedin.com/in/davi-g-883b7a12a/)
 - [Instagram](https://instagram.com/davi.kts)
