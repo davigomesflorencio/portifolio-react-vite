@@ -72,7 +72,7 @@ Sem essas variáveis o site funciona normalmente; só o envio do formulário fal
 | `npm run dev` | Servidor de desenvolvimento |
 | `npm run build` | Checagem de tipos (`tsc -b`) + build de produção em `dist/` |
 | `npm run preview` | Serve o build de `dist/` localmente |
-| `npm run lint` | ESLint |
+| `npm run lint` | ESLint, sem erros nem avisos (`--max-warnings 0`) |
 | `npm run check` | Verifica o build (SEO, tamanho do JS, rotas, imagens). Rode depois do `build` |
 | `npm run check:render` | O mesmo, abrindo cada rota no Chrome headless |
 | `node scripts/optimize-images.mjs` | Converte PNG/JPG de `public/` para WebP e normaliza os nomes |
@@ -132,7 +132,7 @@ Sem essas variáveis o site funciona normalmente; só o envio do formulário fal
 
 ## ⚙️ CI/CD
 
-- **Em cada PR** (`pr-checks.yml`): `npm ci`, `npm run build` e `npm run check:render`. O check se chama **"Build e checagens"**.
+- **Em cada PR** (`pr-checks.yml`): `npm ci`, `npm run lint`, `npm run build` e `npm run check:render`. O check se chama **"Build e checagens"**.
 - **Branch `main` protegida:** merge só via PR com o check passando; force push e exclusão bloqueados.
 - **Deploy** (`deploy-vite-react.yml`): a cada push na `main`, o build é enviado por SSH para o servidor (Nginx em VPS) e o site é verificado.
 

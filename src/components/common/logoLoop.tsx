@@ -79,6 +79,8 @@ const useResizeObserver = (
     return () => {
       observers.forEach((observer) => observer?.disconnect());
     };
+    // As dependências vêm de quem chama o hook; o lint não consegue verificá-las aqui
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies);
 };
 
@@ -119,6 +121,8 @@ const useImageLoader = (
         img.removeEventListener("error", handleImageLoad);
       });
     };
+    // As dependências vêm de quem chama o hook; o lint não consegue verificá-las aqui
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies);
 };
 
@@ -203,7 +207,7 @@ const useAnimationLoop = (
       }
       lastTimestampRef.current = null;
     };
-  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical]);
+  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, trackRef]);
 };
 
 export const LogoLoop = React.memo<LogoLoopProps>(
