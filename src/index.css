@@ -2,9 +2,22 @@
 
 @font-face {
   font-family: "Cal Sans";
-  src: url("/fonts/calsans.ttf") format("truetype");
+  src: url("/fonts/calsans.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  /* Texto aparece na hora com a fonte de fallback e troca quando a Cal Sans carregar */
+  font-display: swap;
+}
+
+/* Fallback com as métricas ajustadas para ocupar o mesmo espaço da Cal Sans,
+   reduzindo o layout shift na troca. Valores calculados a partir da Arial. */
+@font-face {
+  font-family: "Cal Sans Fallback";
+  src: local("Arial"), local("ArialMT"), local("Liberation Sans"), local("Helvetica");
+  size-adjust: 98.78%;
+  ascent-override: 101.23%;
+  descent-override: 30.37%;
+  line-gap-override: 0%;
 }
 
 :root {
@@ -13,7 +26,7 @@
   --color-tertiary: #acacb4;
   --color-quaternary: #e4e4e7;
   --color-accent: #00d3f2;
-  --font-primary: "Cal Sans", "sans-serif";
+  --font-primary: "Cal Sans", "Cal Sans Fallback", sans-serif;
 }
 
 .dark {
