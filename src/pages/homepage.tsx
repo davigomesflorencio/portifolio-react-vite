@@ -354,6 +354,27 @@ const Homepage = () => {
                   {t("homepage.description")}
                 </div>
 
+                {(["casas", "samsung"] as const).map((key) => (
+                  <section key={key} className="w-full mt-8">
+                    <h2 className="text-[22px] font-bold text-secondary">
+                      {t(`homepage.${key}Title`)}
+                    </h2>
+                    <ul className="list-disc pl-6 mt-3 space-y-2 text-[18px] leading-[26px] dark:text-[#f4f4f5]">
+                      {(
+                        t(`homepage.${key}Items`, {
+                          returnObjects: true,
+                        }) as string[]
+                      ).map((item, i) => (
+                        <li key={item}>
+                          <FadeContent duration={600} delay={i * 120}>
+                            {item}
+                          </FadeContent>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                ))}
+
                 <div className="title !w-[100%] lg:!w-[100%] mt-5 lg:mt-0 text-center">
                   <a
                     href={INFO.main.cv}
